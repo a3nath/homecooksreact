@@ -36,3 +36,370 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* setup snippet */
+
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+        
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content:''; clear: both; height: 0; }
+        
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+        
+*, *:before, *:after {box-sizing: inherit}
+        
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/*  */
+
+html{
+    font-size: 62.5%;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+body{
+    font-size:1.6rem;
+    font-family: 'Roboto','Open Sans',sans-serif;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: '500';
+}
+
+Link{
+    text-decoration: none;
+    
+}
+
+.navbar-text > a{
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+h2{
+    margin: 20px 0;
+}
+
+img{margin:0px;}
+
+
+.container{
+    width:90%;
+    max-width: 1190px;
+}
+
+.header-main{
+    height:100vh;
+    position:relative;
+    margin:0;
+}
+/* 
+.header-main::before{
+    background-size:cover;
+    filter: blur(3px);
+    height:100vh;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    content:"";
+    
+} */
+
+Jumbotron{
+    background-color: #131316;
+    margin: 0;
+}
+
+Navbar{
+    display:flex;
+}
+
+.logo{
+    width:40px;
+    height:40px;
+    margin: 20px;
+    background: transparent;
+}
+
+.navbar-nav{
+    display: flex;
+}
+
+.navbar-collapse{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-collapse>*{
+    margin:5px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color:#fff;
+
+}
+
+.loginBtn{
+    padding:5px;
+    border-radius: 2px;
+    border:none;
+    background-color: #000;
+    color:#fff
+}
+
+/* search cook form */
+
+/* .search-cook{
+    position: absolute;
+    bottom: 10px;
+} */
+
+/* /* .search-form{ 
+    width:40%;
+    padding: 20px;
+   background: whitesmoke;
+    border-radius: 10px;
+    /* display: flex;
+    flex-direction:column;
+    justify-content: space-between; }*/
+    
+
+.form-control-sm{
+    padding: 20px;
+    width:50%;
+    font-size: 1.2rem;
+}
+
+/* modal */
+
+.modal-content{
+    background-color: #201e24;
+    color:#fff;
+}
+
+
+/* About section */
+
+.about{
+    background-color: #201e24;
+    padding: 80px 40px;
+    color:#fff;
+}
+
+.about-container>.media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px;
+}
+
+.how-row, .test-row, .cook-row{
+    display: flex;
+}
+
+.i-how{
+    color: #FFF;
+    font-size:8rem;
+    height:40px;
+
+}
+
+/* section cook card */
+.section-cooks-month{
+    background-color: #d1cddc;
+    padding:80px 40px;
+}
+
+.index-cook-group > .index-cook-card{
+    flex:1 1 0;
+}
+
+
+.index-cook-card{
+    background-color: #d1cddc;
+}
+
+.card{
+    border:none;
+    margin:10px;
+    padding:15px;
+}
+
+.card-body{
+    background-color: #fff;
+}
+
+.card-img-top{
+    margin:0;
+    max-width:100%;
+    height:200px;
+}
+
+.cook-img{
+    max-width:100%;
+    background-color: white;
+}
+
+.cook-cat > .allcooks-cook-card{
+    background-color:#d1cddc;
+    width: 29.74%;
+    flex: 0 0 auto;
+}
+
+.section-choose-cooks{
+    padding:100px 0;
+    background-color: #d1cddc;
+}
+
+.section-cook-menu{
+    padding:80px 40px;
+    background-color: #d1cddc;
+}
+
+.cook-menu-group > .menu-card{
+    background-color: #d1cddc;
+    width: 29.74%;
+    flex: 0 1 auto;
+}
+
+
+.card-group > .review-card {
+    width:29.74%;
+    margin: 10px 20px;
+}
+
+.testimonials, .review{
+    background-color: #cbd9e0;
+    padding:80px 40px;
+}
+
+.filter-cat{
+    display:flex;
+    padding:20px;
+}
+
+.filter-tag{
+    margin:0;
+    padding:0 10px;
+}
+
+/* Cook page */
+
+.chef-bio-img{
+    width:250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.cook-form{
+    width:40%;
+}
+
+.cook-star{
+    color:grey;
+}
+
+.cook-star.checked{
+    color:yellow;
+}
+
+.carousel-indicators li{
+    height:10px;
+    width:10px;
+    border-radius: 50%;
+}
+
+.spice-rating>i{
+    color:firebrick;
+}
+
+.chef-bio{
+    padding:80px 0;
+    background-color: #201e24;
+    color:#fff;
+}
+
+.media-body > *{
+    margin: 15px 0;
+}
+
+.becomeCook{
+    width:60%;
+    position: relative;;
+    left:20%;
+    border: solid;
+    border-radius:5px;
+    padding: 40px;
+    margin:20px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    background-color: #ba3605;
+    color:#fff;
+}
+
+
+label{
+    padding:5px;
+    margin:0 3px;
+}
+/*  footer */
+
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-footer{
+    background-color: #131316;
+    color:whitesmoke;
+    padding:40px;
+}
+
+.site-footer i{
+    color:#fff;
+    font-size: 1.8rem;
+}
+
+i:hover{
+    color:#fb8b61;
+}
+
+.footer-link{
+    color:#fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.footer-link:hover{
+    text-decoration: none;
+    color:#fb8b61;
+}
+
+a:hover{
+    color:#fb8b61;
+}
+
+.contact-link{
+    margin:0 2px;
+}
+
+::selection{
+    color:#fb8b61;
+}
+
+
+.list-social{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn.btn-social-icon{
+    margin: 0 15px;
+}
