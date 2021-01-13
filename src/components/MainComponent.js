@@ -3,7 +3,8 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
 // import becomeCook from './BecomeCookComponent';
-import CookMenu from './MenuComponent';
+import CookPage from './CookPage';
+import CookDir from './CookDirectory';
 import {Switch, Route, Redirect, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
 import 'font-awesome/css/font-awesome.css';
@@ -14,7 +15,8 @@ const mapStateToProps = state => {
         cooks: state.cooks,
         about: state.about,
         testimonial: state.testimonial,
-        menu: state.menu
+        menu: state.menu,
+        review: state.review
     };
 };
 
@@ -29,11 +31,13 @@ class Main extends Component {
                 testimonial = {this.props.testimonial}
                 />
         )}
-        const cookwithId = ({match}) => {
+        const CookMenu = ({match}) => {
             return (
-                <CookMenu 
-                    cook={this.props.cooks.filter(cook => cook.cookNum === +match.params.cookId)}   
-                    menu= {this.props.menu.filter(menu => menu.chef === +match.params.cook)}      
+                <CookPage 
+                    // 1 cook who matches the clicked cook
+                    cook={this.props.cooks.filter(cook => cook.cookNum === +match.params.cookNum)[0]}  
+                    menu= {this.props.menu.filter(item => item.cookNum === +match.params.cookNum)}
+                    review = {this.props.review.filter(rev => rev.cookNum === +match.params.cookNum)}         
                 />
             )
         }
@@ -45,9 +49,10 @@ class Main extends Component {
             <div>
                 <Header/>
                 <Switch>
-                    <Route exact path='/' component={HomePage}/>
-                    <Route path ='/cooks' component={cookwithId}/>
-                    <Redirect to='/home'/>
+                    <Route path='/home' component={HomePage}/>
+                    <Route exact path ='/cooks' render={() => <CookDir cooks={this.props.cooks} />}/>
+                    <Route exact path = '/cooks/:cookNum' component={CookMenu}/>
+                    <Redirect path='/home'/>
                 </Switch>
                 <Footer/>
             </div>

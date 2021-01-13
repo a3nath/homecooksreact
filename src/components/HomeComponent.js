@@ -2,6 +2,7 @@ import React from 'react';
 import {Card, CardImg, CardBody, CardText, CardTitle} from 'reactstrap';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap-social/bootstrap-social.css';
+import {Link} from 'react-router-dom';
 
 function RenderTestCard({test}){
    if(test){

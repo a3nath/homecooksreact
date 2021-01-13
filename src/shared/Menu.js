@@ -1,8 +1,31 @@
 export const MENU = [
     {
+        id:7,
+        name:"Food Item 1",
+        chef:"Christian Pullisic",
+        cookNum:1,
+        spice:3,
+        description:'Lorem ipsum',
+        serving: 3,
+        image:'/assets/images/food31.jpg',
+        alt:'food image'
+    },
+    {
+        id:8,
+        name:"Food Item 2",
+        chef:"Christian Pullisic",
+        cookNum:1,
+        spice:3,
+        description:'Lorem ipsum',
+        serving: 4,
+        image:'/assets/images/food32.jpg',
+        alt:'food image'
+    },
+    {
     id:1,
-    chef:"N'golo Kante",
     name:"Food Item 1",
+    chef:"N'golo Kante",
+    cookNum:2,
     spice:3,
     description:'Lorem ipsum',
     serving: 3,
@@ -11,8 +34,9 @@ export const MENU = [
 },
 {
     id:2,
-    chef:"N'golo Kante",
     name:"Food Item 2",
+    chef:"N'golo Kante",
+    cookNum:2,
     spice:3,
     description:'Lorem ipsum',
     serving: 2,
@@ -21,8 +45,9 @@ export const MENU = [
 },
 {
     id:3,
-    chef:"Ji So-yun",
     name:"Food Item 1",
+    chef:"Ji So-yun",
+    cookNum:3,
     spice:3,
     description:'Lorem ipsum',
     serving: 4,
@@ -31,8 +56,9 @@ export const MENU = [
 },
 {
     id:4,
-    chef:"Ji So-yun",
     name:"Food Item 2",
+    chef:"Ji So-yun",
+    cookNum:3,
     spice:3,
     description:'Lorem ipsum',
     serving: 2,
@@ -41,8 +67,9 @@ export const MENU = [
 },
 {
     id:5,
-    chef:"Magdalena Eriksson",
     name:"Food Item 1",
+    chef:"Magdalena Eriksson",
+    cookNum:4,
     spice:3,
     description:'Lorem ipsum',
     serving: 3,
@@ -51,8 +78,9 @@ export const MENU = [
 },
 {
     id:6,
-    chef:"Magdalena Eriksson",
     name:"Food Item 2",
+    chef:"Magdalena Eriksson",
+    cookNum:4,
     spice:3,
     description:'Lorem ipsum',
     serving: 4,
