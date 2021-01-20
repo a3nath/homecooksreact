@@ -1,8 +1,18 @@
 import React from 'react';
-import {Card, CardImg, CardBody, CardText, CardTitle} from 'reactstrap';
+import {Card, CardImg, CardBody, CardText, CardTitle, Jumbotron,} from 'reactstrap';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap-social/bootstrap-social.css';
 import {Link} from 'react-router-dom';
+
+let backstyle = {
+    width:"100%",
+    height:"100vh",
+    backgroundImage:  `url('${process.env.PUBLIC_URL}assets/images/cover.jpg')`,
+    top:'0',
+    left:'0',
+    backgroundSize:'cover'
+}
+
 
 function RenderTestCard({test}){
    if(test){
@@ -37,30 +47,35 @@ function RenderAboutMedia({media}){
 
 }
 
-function RenderCookCard({cook}){
+function RenderCookCard(props){
+    console.log(props)
+    console.log(props.cook)
     return(
         <Card className='index-cook-card'>
-            <CardImg width='100%' src={cook.cookImg} alt={cook.cookName} className='img-fluid d-block cook-img card-img-top'/>
+            <CardImg width='100%' src={props.cook.cookImg} alt={props.cook.cookName} className='img-fluid d-block cook-img card-img-top'/>
             <CardBody>
                 <CardTitle className='card-title cook-name'> 
-                    <h3>{cook.cookName}</h3>
+                    <h3>{props.cook.cookName}</h3>
                 </CardTitle>
                 <CardText>
-                    {cook.cuisine}
+                    {props.cook.cuisine}
                 </CardText>
             </CardBody>
-
         </Card>
-    )}
+    )
+}
 
 function Home(props){
-    const CookDir = props.cooks.filter(cook => cook.featured).map(cook => {
-        return (
-            <div className='col-md-4' key={cook.cookNum}>
-                <RenderCookCard cook={cook} />
-            </div>
-        )
-    })
+    // function CookDir(props){
+    //     const cookFeat = props.cooks.filter(cook => cook.featured)[0]
+    //     return (
+    //         <div className='col-md-4'>
+    //             <RenderCookCard cook={cookFeat}/>
+    //             <p>AAA</p>
+    //         </div>
+    //     )
+    // }
+
     const AboutDir = props.about.map(media =>{ 
         return(
             <div className = 'col-md-4' key={media.id}>
@@ -77,6 +92,7 @@ function Home(props){
     })
     return(
         <div>
+            <Jumbotron fluid className='header-home' style={backstyle}></Jumbotron>
             <section className="about" id="about">
                 <div className="container">
                     <h2>How it works</h2>
@@ -91,7 +107,7 @@ function Home(props){
                         <h2>Cook Highlight</h2>
                     </div>
                     <div className="row cook-row">
-                        {CookDir}
+                        <RenderCookCard cook = {props.cooks.filter(cook => cook.featured)[0]}/>
                     </div>
                     <Link to='/cooks'>Explore All Cooks</Link>
                 </div>

@@ -52,32 +52,42 @@ class Header extends Component {
     render(){
         return(
             <React.Fragment>
-                <Jumbotron fluid className='header-main' style={backstyle}>
-                    <Navbar dark sticky="top" expand='md' color='dark'>
+                    <Navbar sticky="top" expand='md' color='dark' className='navbar'>
                         <div className='container'>
-                            <NavbarBrand className='nav-logo' href='/' >
-                                <img src='/assets/images/logo-one.png' alt='logo image' className='logo'/>
-                            </NavbarBrand>
-                            <NavbarToggler onClick = {this.toggleNav}/> 
-                            <Collapse isOpen={this.state.isNavOpen} navbar className='navbar-nav'>
-                                <Nav navbar className="mr-auto">
-                                        <NavItem>
-                                            <NavLink className='nav-link' to='/home'>
-                                                Home
-                                            </NavLink>
-                                        </NavItem>
+                            <div className='row navbar-row'>
+                                <NavbarBrand className='navbar-logo' href='/' >
+                                    <img src='/assets/images/logo-one.png' alt='logo image' className='logo'/>
+                                </NavbarBrand>
+                                {/* <NavbarToggler onClick = {this.toggleNav}/> */}
+                                <Collapse isOpen={this.state.isNavOpen} navbar className='navbar-nav'>
+                                    <Nav navbar className="mr-auto">
+                                            <NavItem>
+                                                <NavLink className='nav-link' to='/home'>
+                                                    Home
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink className='nav-link' to='/cooks'>
+                                                    Cooks
+                                                </NavLink>
+                                            </NavItem>
+                                            <NavItem>
+                                                <NavLink className='nav-link' to='/becomecook'>
+                                                    Become Cook
+                                                </NavLink>
+                                            </NavItem>
 
-                                </Nav>
-                                <span className='Navbar-text ml-auto'>
-                                        <Button onClick={this.toggleModal} className='loginBtn'>
-                                            <i className='fa fa-sign-in fa-lg'/>
-                                                Login
-                                        </Button>
-                                </span>
-                            </Collapse>
+                                    </Nav>
+                                    <span className='Navbar-text ml-auto nav-login'>
+                                            <Button onClick={this.toggleModal} className='loginBtn'>
+                                                <i className='fa fa-sign-in fa-lg'/>
+                                                    Login
+                                            </Button>
+                                    </span>
+                                </Collapse>
+                            </div>
                         </div>
                     </Navbar>
-                </Jumbotron>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}> Login</ModalHeader>
                     <ModalBody>

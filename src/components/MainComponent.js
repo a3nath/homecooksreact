@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
-// import becomeCook from './BecomeCookComponent';
+import becomeCook from './BecomeCookComponent';
 import CookPage from './CookPage';
 import CookDir from './CookDirectory';
 import {Switch, Route, Redirect, withRouter} from 'react-router-dom';
@@ -42,17 +42,15 @@ class Main extends Component {
             )
         }
 
-        // Problem: How do I assign a cook Id when I click on that cook
-        // So, when I click on a cook, it goes to the url
-
         return(
             <div>
                 <Header/>
                 <Switch>
-                    <Route path='/home' component={HomePage}/>
+                    <Route exact path='/home' component={HomePage}/>
                     <Route exact path ='/cooks' render={() => <CookDir cooks={this.props.cooks} />}/>
                     <Route exact path = '/cooks/:cookNum' component={CookMenu}/>
-                    <Redirect path='/home'/>
+                    <Route exact path ='/becomecook' component={becomeCook}/>
+                    <Redirect to='/home'/>
                 </Switch>
                 <Footer/>
             </div>

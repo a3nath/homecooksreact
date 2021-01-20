@@ -28,7 +28,7 @@ class becomeCook extends Component{
                         <h2>Become Cook</h2>
                     </div>
                     <div className='row'>
-                        <Form onSubmit ={values => this.handleSubmit(values)}>
+                        <LocalForm onSubmit ={values => this.handleSubmit(values)}>
                             <div className='form-group'>
                                 <Label htmlfor='name'>Name</Label>
                                 <Control.text type='text' model='.name' id='name' name='name' className='form-control'
@@ -67,7 +67,7 @@ class becomeCook extends Component{
                                 />
                             </div>
                             <Button type='submit' className='btn btn-primary' color='primary'>Submit</Button>
-                        </Form>
+                        </LocalForm>
                     </div>
                 </section>
             </div>
@@ -75,3 +75,4 @@ class becomeCook extends Component{
 }
 
 export default becomeCook;
+

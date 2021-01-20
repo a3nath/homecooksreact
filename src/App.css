@@ -63,6 +63,39 @@ body{
     font-family: 'Roboto','Open Sans',sans-serif;
 }
 
+.container{
+    width:90%;
+    max-width: 1190px;
+    margin: 0 auto;
+}
+
+.navbar{
+    height: 80px;
+    background-color: #201e24;
+    box-shadow: 0 10px 28px 0 rgba(0,0,0,.05);
+}
+
+.header-home{
+    height: calc(100vh - 80px) !important;
+    position:relative;
+    margin:0;
+}
+
+.navbar-row{
+    display: flex;
+}
+
+.navbar-nav{
+    display: flex;
+    position: relative;
+    width:100%;
+    align-items: center;
+}
+
+.nav-link{
+    padding:4px;
+}
+
 h2{
     font-family: 'Montserrat', sans-serif;
     font-weight: '500';
@@ -70,7 +103,6 @@ h2{
 
 Link{
     text-decoration: none;
-    
 }
 
 .navbar-text > a{
@@ -89,16 +121,7 @@ h2{
 img{margin:0px;}
 
 
-.container{
-    width:90%;
-    max-width: 1190px;
-}
 
-.header-main{
-    height:100vh;
-    position:relative;
-    margin:0;
-}
 /* 
 .header-main::before{
     background-size:cover;
@@ -112,14 +135,11 @@ img{margin:0px;}
     
 } */
 
-Jumbotron{
-    background-color: #131316;
-    margin: 0;
-}
 
-Navbar{
+
+/* Navbar{
     display:flex;
-}
+} */
 
 .logo{
     width:40px;
@@ -128,31 +148,32 @@ Navbar{
     background: transparent;
 }
 
-.navbar-nav{
+/* .navbar-nav{
     display: flex;
-}
+} */
 
-.navbar-collapse{
+/* .navbar-collapse{
     display: flex;
     justify-content: space-between;
-}
+} */
 
-.navbar-collapse>*{
+/* .navbar-collapse>*{
     margin:5px;
-}
+} */
 
-.nav-link{
+/* .nav-link{
     text-decoration: none;
     color:#fff;
 
-}
+} */
 
 .loginBtn{
     padding:5px;
     border-radius: 2px;
     border:none;
-    background-color: #000;
-    color:#fff
+    background-color: #201e24;
+    color:#fff;
+    display: flex;
 }
 
 /* search cook form */
@@ -189,9 +210,9 @@ Navbar{
 /* About section */
 
 .about{
-    background-color: #201e24;
-    padding: 80px 40px;
-    color:#fff;
+    background-color: #fff;
+    padding: 160px 40px;
+    color:#201e24;
 }
 
 .about-container>.media{
@@ -205,6 +226,12 @@ Navbar{
     display: flex;
 }
 
+.test-card{
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 25px;
+}
+
 .i-how{
     color: #FFF;
     font-size:8rem;
@@ -214,8 +241,9 @@ Navbar{
 
 /* section cook card */
 .section-cooks-month{
-    background-color: #d1cddc;
+    background-color: #cbd9e0;
     padding:80px 40px;
+    color:#54575a
 }
 
 .index-cook-group > .index-cook-card{
@@ -224,7 +252,8 @@ Navbar{
 
 
 .index-cook-card{
-    background-color: #d1cddc;
+    border-radius: 5px;
+    display: flex;
 }
 
 .card{
@@ -233,9 +262,9 @@ Navbar{
     padding:15px;
 }
 
-.card-body{
+/* .card-body{
     background-color: #fff;
-}
+} */
 
 .card-img-top{
     margin:0;
@@ -245,7 +274,8 @@ Navbar{
 
 .cook-img{
     max-width:100%;
-    background-color: white;
+    width: 300px;
+    height: 400px;
 }
 
 .cook-cat > .allcooks-cook-card{
