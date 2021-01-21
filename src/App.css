@@ -61,6 +61,7 @@ html{
 body{
     font-size:1.6rem;
     font-family: 'Roboto','Open Sans',sans-serif;
+    color:#201e24;
 }
 
 .container{
@@ -94,6 +95,9 @@ body{
 
 .nav-link{
     padding:4px;
+    margin: 6px;
+    color:#fff;
+    text-decoration: none;
 }
 
 h2{
@@ -122,25 +126,6 @@ img{margin:0px;}
 
 
 
-/* 
-.header-main::before{
-    background-size:cover;
-    filter: blur(3px);
-    height:100vh;
-    width:100%;
-    position: absolute;
-    top:0;
-    left:0;
-    content:"";
-    
-} */
-
-
-
-/* Navbar{
-    display:flex;
-} */
-
 .logo{
     width:40px;
     height:40px;
@@ -148,9 +133,6 @@ img{margin:0px;}
     background: transparent;
 }
 
-/* .navbar-nav{
-    display: flex;
-} */
 
 /* .navbar-collapse{
     display: flex;
@@ -161,11 +143,7 @@ img{margin:0px;}
     margin:5px;
 } */
 
-/* .nav-link{
-    text-decoration: none;
-    color:#fff;
 
-} */
 
 .loginBtn{
     padding:5px;
@@ -174,6 +152,11 @@ img{margin:0px;}
     background-color: #201e24;
     color:#fff;
     display: flex;
+    width: 90px;
+}
+
+.fa-sign-in{
+    margin: 0 5px;
 }
 
 /* search cook form */
@@ -208,7 +191,7 @@ img{margin:0px;}
 
 
 .grad-sect {
-    background: linear-gradient(190deg, #fff,#dbe5ea 40%,#bbcdd6);
+    background: linear-gradient(190deg, #fff,#bbcdd6);
     height: 1600px;
 }
 
@@ -290,14 +273,30 @@ img{margin:0px;}
 
 .carousel-img{
     width: 100%;
-    height: 250px;
+    height: 100%;
     border-radius: 5px;
+    padding-bottom: 0;
 }
 
+.carousel-body{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    color: #201e24
+}
 
+.carousel-text{
+    text-decoration: none;
+    margin:10px;
+}
 
 .carousel-cook-media{
     background-color: #fff;
+}
+
+.cookLink{
+    text-decoration: none;
 }
 
 .cook-row > .allcooks-cook-card{

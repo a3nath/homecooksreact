@@ -10,7 +10,7 @@ function RenderCookCard(props){
     return(
         <li className='card allcooks-cook-card'>
             <div className="media carousel-cook-media">
-                <Link to={`/cooks/${props.cook.cookNum}`}>
+                <Link to={`/cooks/${props.cook.cookNum}`} className='cookLink'>
                 <CarouselProvider
                     naturalSlideWidth={50}
                     naturalSlideHeight={50}
@@ -31,10 +31,10 @@ function RenderCookCard(props){
                     </Slider>  
                     </CarouselProvider> 
                         <div className="carousel-body card-body">
-                            <h5 className='cook-name'>{props.cook.cookName}</h5>
-                            <p className='card-text cuisine-name'>{props.cook.cuisine}</p>
-                            <p>{props.cook.description}</p>
-                            <p>{props.cook.rating}</p>
+                            <h4 className='cook-name carousel-text'>{props.cook.cookName}</h4>
+                            <p className='card-text cuisine-name carousel-text'>{props.cook.cuisine}</p>
+                            <p className='card-text carousel-text'>{props.cook.description}</p>
+                            <p className='card-text carousel-text'>{props.cook.rating}</p>
                         </div>
                 </Link>
             </div>
