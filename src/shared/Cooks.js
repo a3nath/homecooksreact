@@ -5,12 +5,11 @@ export const COOKS = [
     rating:3.5,
     cookImg: "/assets/images/chef1.jpg",
     alt:"cook 1 img",
-    foodImg1: "food11",
-    foodImg2: "food12",
     page:"cook1.html",
     description:"lorem ipsum",
-    featured:true
-
+    featured:true,
+    foodImg1: "/assets/images/food11.jpg",
+    foodImg2: "/assets/images/food12.jpg",
     },
     {cookName: "N'golo Kante",
     cookNum:2,
@@ -18,8 +17,8 @@ export const COOKS = [
     rating:4.8,
     cookImg: "/assets/images/chef2.jpg",
     alt:"cook 2 img",
-    foodImg1: "food21",
-    foodImg2:"food22",
+    foodImg1: "/assets/images/food21.jpg",
+    foodImg2: "/assets/images/food22.jpg",
     page:"cook2.html",
     description:"lorem ipsum",
     featured:false
@@ -31,8 +30,8 @@ export const COOKS = [
     rating:5,
     cookImg: "/assets/images/chef3.jpg",
     alt:"cook 3 img",
-    foodImg1: "food31",
-    foodImg2: "food32",
+    foodImg1: "/assets/images/food31.jpg",
+    foodImg2: "/assets/images/food32.jpg",
     page:"cook3.html",
     description:"lorem ipsum",
     featured:true
@@ -43,8 +42,8 @@ export const COOKS = [
     rating:4.2,
     cookImg: "/assets/images/chef4.jpg",
     alt:"cook 4 img",
-    foodImg1: "food41",
-    foodImg2: "food42",
+    foodImg1: "/assets/images/food41.jpg",
+    foodImg2: "/assets/images/food42.jpg",
     page:"cook4.html",
     description:"lorem ipsum",
     featured:true

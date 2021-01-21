@@ -16,7 +16,9 @@ const mapStateToProps = state => {
         about: state.about,
         testimonial: state.testimonial,
         menu: state.menu,
-        review: state.review
+        review: state.review,
+        images: state.images
+
     };
 };
 
@@ -47,7 +49,7 @@ class Main extends Component {
                 <Header/>
                 <Switch>
                     <Route exact path='/home' component={HomePage}/>
-                    <Route exact path ='/cooks' render={() => <CookDir cooks={this.props.cooks} />}/>
+                    <Route exact path ='/cooks' render={() => <CookDir cooks={this.props.cooks}  menu={this.props.menu} images={this.props.images}/>}/>
                     <Route exact path = '/cooks/:cookNum' component={CookMenu}/>
                     <Route exact path ='/becomecook' component={becomeCook}/>
                     <Redirect to='/home'/>

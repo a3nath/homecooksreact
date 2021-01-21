@@ -1,25 +1,25 @@
 export const MENU = [
     {
-        id:7,
-        name:"Food Item 1",
-        chef:"Christian Pullisic",
-        cookNum:1,
-        spice:3,
-        description:'Lorem ipsum',
-        serving: 3,
-        image:'/assets/images/food31.jpg',
-        alt:'food image'
+    id:7,
+    name:"Food Item 1",
+    chef:"Christian Pullisic",
+    cookNum:1,
+    spice:3,
+    description:'Lorem ipsum',
+    serving: 3,
+    image:'/assets/images/food41.jpg',
+    alt:'food image'
     },
     {
-        id:8,
-        name:"Food Item 2",
-        chef:"Christian Pullisic",
-        cookNum:1,
-        spice:3,
-        description:'Lorem ipsum',
-        serving: 4,
-        image:'/assets/images/food32.jpg',
-        alt:'food image'
+    id:8,
+    name:"Food Item 2",
+    chef:"Christian Pullisic",
+    cookNum:1,
+    spice:3,
+    description:'Lorem ipsum',
+    serving: 4,
+    image:'/assets/images/food42.jpg',
+    alt:'food image'
     },
     {
     id:1,

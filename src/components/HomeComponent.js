@@ -85,44 +85,46 @@ function Home(props){
     })
     const TestDir = props.testimonial.map(test => {
         return(
-            <div className = 'col-md-3' key={test.id}>
+            <div className = 'test-card-container' key={test.id}>
                 <RenderTestCard test={test}/>
             </div>
         )
     })
     return(
-        <div>
+        <React.Fragment>
             <Jumbotron fluid className='header-home' style={backstyle}></Jumbotron>
-            <section className="about" id="about">
-                <div className="container">
-                    <h2>How it works</h2>
-                    <div className="row how-row">
-                        {AboutDir}
+            <div className='grad-sect'>
+                <section className="about" id="about">
+                    <div className="container">
+                        <h2>How it works</h2>
+                        <div className="row how-row">
+                            {AboutDir}
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section id="cooks" className="section-cooks-month">
-                <div className="container card-group index-cook-group">
-                    <div className='row'>
-                        <h2>Cook Highlight</h2>
+                </section>
+                <section id="cooks" className="section-cooks-month">
+                    <div className="container card-group index-cook-group">
+                        <div className='row'>
+                            <h2>Cook Highlight</h2>
+                        </div>
+                        <div className="row cook-row">
+                            <RenderCookCard cook = {props.cooks.filter(cook => cook.featured)[0]}/>
+                        </div>
+                        <Link to='/cooks'>Explore All Cooks</Link>
                     </div>
-                    <div className="row cook-row">
-                        <RenderCookCard cook = {props.cooks.filter(cook => cook.featured)[0]}/>
+                </section>
+                <section id='testimonials' className='testimonials'>
+                    <div className="container">
+                        <div className='row'>
+                            <h2>Testimonials</h2>
+                        </div>
+                        <div className="row test-row">
+                            {TestDir}   
+                        </div>
                     </div>
-                    <Link to='/cooks'>Explore All Cooks</Link>
-                </div>
-            </section>
-            <section id='testimonials' className='testimonials'>
-                <div className="container">
-                    <div className='row'>
-                        <h2>Testimonials</h2>
-                    </div>
-                    <div className="row test-row">
-                        {TestDir}   
-                    </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
+        </React.Fragment>
     )
 };
 

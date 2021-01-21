@@ -13,5 +13,15 @@ export const TESTIMONIAL = [
         id:3,
         description:"Lorem ipsum",
         name:"Lorem ipsum"
+    },
+    {
+        id:4,
+        description:"Lorem ipsum",
+        name:"Lorem ipsum"
+    },
+    {
+        id:5,
+        description:"Lorem ipsum",
+        name:"Lorem ipsum"
     }
 ]
