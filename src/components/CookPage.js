@@ -1,18 +1,25 @@
 import React from 'react';
 import {Card, CardImg, CardBody, CardText, CardTitle} from 'reactstrap';
 import {Link} from 'react-router-dom';
+import FontAwesome from 'react-fontawesome';
+import faStyles from 'font-awesome/css/font-awesome.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faPepperHot } from '@fortawesome/free-solid-svg-icons';
+
 
 function RenderCookMenu({menu}){
     return(
         <div className="card menu-card">
             <img src={menu.image} alt={menu.alt} className="card-img-top"/>
-                <div className="card-body">
-                    <p>{menu.serving}</p>
-                    <div className="spice-rating">
-                        <p>{menu.spice}</p>
-                    </div>
-                        <p>{menu.description}</p>
+            <div className="card-body menu-card-body">
+                <p>{menu.name}</p>
+                <p className='menu-card-description'>{menu.description.slice(0,50)}</p>
+                <p>Serves: {menu.serving}</p>
+                <div className='spiceIcon'>
+                    <IconMultiply count={menu.spice} icon={<FontAwesomeIcon icon={faPepperHot}/>}/>
                 </div>
+            </div>
         </div>
     )
 }
@@ -40,45 +47,54 @@ function RenderCookReview({review}){
 function RenderCookCard(props){
 
     return(
-            <div className="media cook-media">
-                <div className="col-sm-4">
-                    <img src={props.cook.cookImg} alt={props.cook.alt} className='rounded img-fluid d-block chef-bio-img'/>
+            <div className="media cookpage-media" key={props.cook.cookNum}>
+                <div className="cookpage-media-img">
+                    <img src={props.cook.cookImg} alt={props.cook.alt} className='img-fluid d-block cook-bio-img'/>
                 </div>
-                <div className="col-sm-6">
-                    <div className="media-body">
-                        <h3 className='cook-name'>{props.cook.cookName}</h3>
-                        <p className='card-text cuisine-name'>{props.cook.cuisine}</p>
-                        <div className="cook-rating">
-                            <i className="fas fa-star cook-star checked"></i>
-                            <i className="fas fa-star cook-star checked"></i>
-                            <i className="fas fa-star cook-star checked"></i>
-                            <i className="fas fa-star cook-star checked"></i>
-                            <i className="fas fa-star cook-star"></i>
-                        </div>
-                        <p>{props.cook.description}</p>
-                        <p>{props.cook.rating}</p>              
-                    </div>
+                <div className="cookpage-media-body card-body">
+                    <h3 className='cook-name cook-media-text'>{props.cook.cookName}</h3>
+                    <p className='card-text cuisine-name cook-media-text'>{props.cook.cuisine}</p>
+                    <p className='cook-media-text'>{props.cook.description}</p>
+                    <div className="cook-rating cook-media-text ratingIcon">
+                        <IconMultiply count={props.cook.rating} icon={<FontAwesomeIcon icon={faStar}/>}/>
+                    </div>           
                 </div>
             </div>     
         )
 };
 
+function IconMultiply(props){
+    let count = props.count
+    let icon = props.icon
+    let iconArr = []
+    for (let i = 0; i < count; i++ ){
+        iconArr.push(icon)
+    }
+    return iconArr
+}
+
 function CookPage(props){
 
     const CookMenu = props.menu.map(item =>{
         return(
+            <div className='cook-menu-container' key={item.id}>
                 <RenderCookMenu menu={item}/>
+            </div>
+                
         )
     })
 
     const CookReview = props.review.map(rev => {
         return(
-            <RenderCookReview review={rev}/>
+            <div className='cook-review-container' key={rev.id}>
+                <RenderCookReview review={rev}/>
+            </div>
+            
         )
     })
 
     return (
-        <div>
+        <div className='cook-page'>
             <section className='cook-bio'>
                 <div className="container">
                     <div className="row">
@@ -88,20 +104,23 @@ function CookPage(props){
             </section>
             <section className='cook-menu'>
                 <div className='container'>
-                    <h2>Menu</h2>
-                        <div className='card-group cook-menu-group'></div>
-                            {CookMenu}
+                    <div className='row'>
+                        <h2>Menu</h2>
+                    </div>
+                    <div className='card-group cook-menu-group row'>
+                        {CookMenu}
+                    </div>     
                 </div>
             </section>
-            <section className='cook-reviews'>
+            <section className='cook-review'>
                 <div className='container'>
-                    <h2>
-                        Customer Reviews
-                    </h2>
-                    <div className='row review-row'>
-                        <div className='card-group'>
-                            {CookReview}
-                        </div>
+                    <div className='row'>
+                        <h2>
+                            Customer Reviews
+                        </h2>
+                    </div>
+                    <div className='row review-row card-group'>
+                        {CookReview}
                     </div>
                 </div>
             </section>

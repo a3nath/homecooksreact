@@ -8,7 +8,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 
 function RenderCookCard(props){
     return(
-        <li className='card allcooks-cook-card'>
+        <div className='card allcooks-cook-card'>
             <div className="media carousel-cook-media">
                 <Link to={`/cooks/${props.cook.cookNum}`} className='cookLink'>
                 <CarouselProvider
@@ -33,45 +33,32 @@ function RenderCookCard(props){
                         <div className="carousel-body card-body">
                             <h4 className='cook-name carousel-text'>{props.cook.cookName}</h4>
                             <p className='card-text cuisine-name carousel-text'>{props.cook.cuisine}</p>
-                            <p className='card-text carousel-text'>{props.cook.description}</p>
+                            <p className='card-text carousel-text'>{props.cook.description.slice(0,50)}</p>
                             <p className='card-text carousel-text'>{props.cook.rating}</p>
                         </div>
                 </Link>
             </div>
-        </li>
+        </div>
     )
 }
 
 function CookDir(props) {
 
-    // let imgArr = []
-    // let imgArr2 = []
-
-    // props.cooks.map(cook => { 
-       
-    //     imgArr = props.menu.filter(item => item.cookNum === cook.cookNum)
-    //     imgArr2 = props.menu.map(item => ((item.cookNum === cook.cookNum) ? imgArr2.push(item.image):''))
-    //     // props.menu.filter(item => item.cookNum === cook.cookNum).map(element => imgArr2.push(element.image))
-    //     console.log(imgArr)
-    //     console.log(imgArr2)
-    // })
-
-    // console.log('print outside map')
-    // console.log(imgArr)
-    // // console.log(imgArr2)
-
     const CookRow =  props.cooks.map(cook => {
         return(
-                <RenderCookCard cook={cook}/>
+                <div className='cook-card-container' key={cook.cookNum}>
+                    <RenderCookCard cook={cook}/>
+                </div>
+                
         )
     })
 
     return(
         <section className='section-cookDir'>
                     <div className="container">
-                        <ul className="row card-group cook-row">
+                        <div className="row card-group cookdir-cardgroup">
                             {CookRow}
-                        </ul>
+                        </div>
                     </div>
         </section>
     )

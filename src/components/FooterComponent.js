@@ -24,22 +24,22 @@ class Footer extends Component{
 
     render(){
         return(
-            <div>
                 <footer className='site-footer'>
                     <div className='container'>
                         <div className='row footer-row'>
-                            <div className='col-4 col-sm-2 offset-1'>
+                            <div className='links-container footer-list-container'>
                                 <h4>Links</h4>
-                                <ul className='list-unstyled'>
+                                <ul className='footer-list-link footer-list'>
                                     <li><Link to='/home' className='footer-link'>Home</Link></li>
-                                    <li><Link className='footer-link'></Link></li>
+                                    <li><Link to='/coonks' className='footer-link'>Cooks</Link></li>
+                                    <li><Link to='/becomecook' className='footer-link'>Become Cook</Link></li>
                                 </ul>
                             </div>
-                            <div className='col-6 col-sm-5 text-center'>
+                            <div className='social-container footer-list-container'>
                                 <h4>Social</h4>
-                                <ul className='list-social'>
+                                <ul className='footer-list-social footer-list'>
                                     <li>
-                                        <Link className='btn btn-social-icon btn-instagram' href='http://instagram.com/'><i className='fa fa-nstagram'></i></Link>
+                                        <Link className='btn btn-social-icon btn-instagram' href='http://instagram.com/'><i className='fa fa-instagram'></i></Link>
                                     </li>
                                     <li>
                                         <Link className="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i className="fa fa-facebook"></i></Link>
@@ -52,17 +52,23 @@ class Footer extends Component{
                                     </li>
                                 </ul>                                                                   
                             </div>
-                            <div>
+                            <div className='contact-container footer-list-container'>
                                 <h4>Contact</h4> 
-                                <Link role="button" className="btn btn-link footer-link" href="tel:+12065551234"><i className="fa fa-phone contact-link"></i> 1-206-555-1234</Link><br />
-                                <Link role="button" className="btn btn-link footer-link " href="mailto:campsites@nucamp.co"><i className="fa fa-envelope-o contact-link"></i> contact@homecooks.com</Link>
+                                <ul className='footer-list-contact footer-list'>
+                                    <li>
+                                        <Link role="button" className="btn btn-link footer-link" href="tel:+12065551234"><i className="fa fa-phone contact-link"></i> 1-206-555-1234</Link>
+                                    </li>
+                                    <li>
+                                        <Link role="button" className="btn btn-link footer-link " href="mailto:campsites@nucamp.co"><i className="fa fa-envelope-o contact-link"></i> contact@homecooks.com</Link>
+                                    </li>                           
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </footer>
-            </div>
-        )
+            )
     }
 }
+
 
 export default Footer;

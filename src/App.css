@@ -105,6 +105,10 @@ h2{
     font-weight: '500';
 }
 
+p{
+    margin:0;
+}
+
 Link{
     text-decoration: none;
 }
@@ -191,8 +195,7 @@ img{margin:0px;}
 
 
 .grad-sect {
-    background: linear-gradient(190deg, #fff,#bbcdd6);
-    height: 1600px;
+    background: linear-gradient(180deg, #fbfcfd, #dbe5ea 40%,#bbcdd6);
 }
 
 /* About section */
@@ -229,33 +232,77 @@ img{margin:0px;}
 
 }
 
-/* section cook card */
-.section-cooks-month{
-    padding:80px 40px;
-    color:#54575a
-}
-
-.index-cook-group > .index-cook-card{
-    flex:1 1 0;
-}
-
-
-.index-cook-card{
-    border-radius: 5px;
-    display: flex;
-}
+/*  */
 
 .card{
     border:none;
-    margin:10px;
+    margin:10px 20px;
     padding:15px;
 }
 
+.card-body{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    color: #201e24;
+    margin: 10px 0;
+    padding: 10px 0;
+
+}
+
+.card-group{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .card-img-top{
     margin:0;
     max-width:100%;
     height:200px;
+}
+
+/* section cook highlight */
+.section-cooks-Highlight{
+    padding:80px 40px;
+    color:#201e24
+}
+
+.cookHighlight-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.cookHighlight-card{
+    border-radius: 5px;
+    display: flex;
+}
+
+.cookHighlight-card-body{
+    margin: 0 50px;
+    padding: 0 20px;
+}
+
+.cookHighlight-text{
+    text-align: left;
+    margin: 4px 0;
+}
+
+.explore-link{
+    color:#201e24;
+
+}
+
+/* testimonial */
+
+
+.testimonials{
+    padding:80px 40px;
+}
+
+.test-row{
+    justify-content: space-evenly;
 }
 
 /* cook directory */
@@ -266,9 +313,17 @@ img{margin:0px;}
     height: 400px;
 }
 
-.cook-row{
-    display: flex;
-    flex-wrap: wrap;
+
+.cookdir-cardgroup{
+    justify-content: space-around;
+}
+
+.cook-card-container{
+    width:calc(100%/3.5);
+}
+
+.allcooks-cook-card{
+    width: calc(100%);
 }
 
 .carousel-img{
@@ -278,161 +333,212 @@ img{margin:0px;}
     padding-bottom: 0;
 }
 
-.carousel-body{
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-decoration: none;
-    color: #201e24
-}
 
 .carousel-text{
     text-decoration: none;
-    margin:10px;
-}
-
-.carousel-cook-media{
-    background-color: #fff;
+    margin:1px;
+    text-align: start;
 }
 
 .cookLink{
     text-decoration: none;
 }
 
-.cook-row > .allcooks-cook-card{
-    width: 29.74%;
-    flex: 0 0 auto;
-}
-
-.section-choose-cooks{
-    padding:100px 0;
-    background-color: #dbe5ea;
-}
 
 .section-cookDir{
     padding:80px 40px;
-    background-color: #dbe5ea;
+    background: linear-gradient(180deg, #dbe5ea,#bbcdd6);
 }
 
-.cook-menu-group > .menu-card{
-    background-color: #dbe5ea;
-    width: 29.74%;
-    flex: 0 1 auto;
-}
-
-
-.card-group > .review-card {
-    width:29.74%;
-    margin: 10px 20px;
-}
-
-.testimonials, .review{
-    padding:80px 40px;
-}
-
-.test-row{
-    justify-content: space-evenly;
-}
-
-.filter-cat{
-    display:flex;
-    padding:20px;
-}
-
-.filter-tag{
-    margin:0;
-    padding:0 10px;
-}
 
 /* Cook page */
 
-.chef-bio-img{
-    width:250px;
-    height: 250px;
+.cook-bio{
+    padding: 80px 40px;
 }
 
-.cook-form{
-    width:40%;
+.cook-page{
+    padding: 80px 40px;
+    background: linear-gradient(180deg, #dbe5ea,#abc2cd);
+
 }
 
-.cook-star{
-    color:grey;
-}
-
-.cook-star.checked{
-    color:yellow;
-}
-
-.carousel-indicators li{
-    height:10px;
-    width:10px;
+.cook-bio-img{
+    width:300px;
+    height: 300px;
     border-radius: 50%;
 }
 
-.spice-rating>i{
-    color:firebrick;
+.cookpage-media{
+    display: flex;
 }
 
-.chef-bio{
-    padding:80px 0;
-    background-color: #201e24;
-    color:#fff;
+.cookpage-media-body{
+    margin: 0 50px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
+.cook-media-text{
+    text-align: start;
+    margin: 8px 0;
+}
+
+.menu-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card-body{
+    background-color: #fff;
+    margin:0;
+    padding: 10px;
+}
+
+
+
+.ratingIcon{
+    color:yellow;
+}
+
+.spiceIcon{
+    color:red;
+}
+
+
+.cook-review{
+    padding:80px 40px;
+}
+
+.review-card {
+   border-radius: 4px;
+   background-color: #fff;
+}
+
+.test-card-container, .cook-review-container{
+    width:25%;
+}
+
 
 .media-body > *{
     margin: 15px 0;
 }
 
+.cook-menu{
+    padding: 80px 40px;
+}
+
+.cook-menu-group{
+    display: flex;
+}
+
+
+/* become cook */
+
 .becomeCook{
-    width:60%;
-    position: relative;;
-    left:20%;
-    border: solid;
+    background: linear-gradient(180deg, #fff,#dbe5ea);
+    padding: 80px 40px;
+}
+
+.becomeCookForm{
+    background-color: #bbcdd6;
     border-radius:5px;
-    padding: 40px;
-    margin:20px;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-    background-color: #ba3605;
+    box-shadow: 12px 12px 2px 1px rgba(255, 255, 255, .5);
+    padding: 50px 80px;
+    border: solid #7d7d90;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 40%;;
+}
+
+.form-group{
+    padding:10px;
+    margin: 0 auto;
+}
+
+
+.becomeCookLabel{
+    padding:5px;
+    margin-right: 3px;
+}
+
+.becomeCookInput{
+    padding:5px;
+}
+
+.becomeCookSubmit{
+    padding:8px 16px;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+.text-danger{
+    text-align:end;
+    margin: 5px 0;
+}
+
+/*  footer */
+
+.site-footer{
+    background-color: #131316;
+    color:whitesmoke;
+    padding:40px 40px;
     color:#fff;
 }
 
-
-label{
-    padding:5px;
-    margin:0 3px;
+.footer-list-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-/*  footer */
 
 .footer-row{
     display: flex;
     justify-content: space-between;
 }
 
-.site-footer{
-    background-color: #131316;
-    color:whitesmoke;
-    padding:40px;
+.footer-list{
+    padding:20px 0;
 }
 
-.site-footer i{
+.footer-list-link, .footer-list-contact{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 0;  
+}
+
+.footer-list-social{
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.footer-link{
     color:#fff;
-    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.btn-social-icon{
+    padding: 20px;
+    background-color: #131316;
 }
 
 i:hover{
     color:#fb8b61;
 }
 
-.footer-link{
-    color:#fff;
-    font-size: 1.2rem;
-    text-decoration: none;
-}
 
 .footer-link:hover{
     text-decoration: none;
     color:#fb8b61;
 }
+
 
 a:hover{
     color:#fb8b61;
@@ -446,14 +552,5 @@ a:hover{
     color:#fb8b61;
 }
 
-
-.list-social{
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn.btn-social-icon{
-    margin: 0 15px;
-}
 
 

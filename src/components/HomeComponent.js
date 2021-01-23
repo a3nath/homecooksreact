@@ -3,6 +3,11 @@ import {Card, CardImg, CardBody, CardText, CardTitle, Jumbotron,} from 'reactstr
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap-social/bootstrap-social.css';
 import {Link} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {faSearch} from '@fortawesome/free-solid-svg-icons';
+// import {faUtensils} from '@fortawesome/free-solid-svg-icons';
+// import {faShippingFast} from '@fortawesome/free-solid-svg-icons';
+
 
 let backstyle = {
     width:"100%",
@@ -32,33 +37,34 @@ function RenderTestCard({test}){
 function RenderAboutMedia({media}){
     if (media){
         return(
-            <React.Fragment>
-            <div className="about-container">
+            <div>
+                <div className="about-container">
                     <div className="media">
-                        <i className={media.icon}></i>
+                        <FontAwesomeIcon icon={media.icon}/>
                         <div className="media-body">
                             <h3>{media.title}</h3> 
                         </div>
                     </div>
                 </div>
-        </React.Fragment>
+            </div>
     )}
     return <div></div>
 
 }
 
 function RenderCookCard(props){
-    console.log(props)
-    console.log(props.cook)
     return(
-        <Card className='index-cook-card'>
+        <Card className='cookHighlight-card'>
             <CardImg width='100%' src={props.cook.cookImg} alt={props.cook.cookName} className='img-fluid d-block cook-img card-img-top'/>
-            <CardBody>
-                <CardTitle className='card-title cook-name'> 
+            <CardBody className='cookHighlight-card-body'y>
+                <CardTitle className='card-title cook-name cookHighlight-text'> 
                     <h3>{props.cook.cookName}</h3>
                 </CardTitle>
-                <CardText>
+                <CardText className='cookHighlight-text'>
                     {props.cook.cuisine}
+                </CardText>
+                <CardText className='cookHighlight-text'>
+                    {props.cook.description}
                 </CardText>
             </CardBody>
         </Card>
@@ -66,16 +72,6 @@ function RenderCookCard(props){
 }
 
 function Home(props){
-    // function CookDir(props){
-    //     const cookFeat = props.cooks.filter(cook => cook.featured)[0]
-    //     return (
-    //         <div className='col-md-4'>
-    //             <RenderCookCard cook={cookFeat}/>
-    //             <p>AAA</p>
-    //         </div>
-    //     )
-    // }
-
     const AboutDir = props.about.map(media =>{ 
         return(
             <div className = 'col-md-4' key={media.id}>
@@ -96,21 +92,23 @@ function Home(props){
             <div className='grad-sect'>
                 <section className="about" id="about">
                     <div className="container">
-                        <h2>How it works</h2>
+                        <div className='row'>
+                            <h2>How it works</h2>
+                        </div>
                         <div className="row how-row">
                             {AboutDir}
                         </div>
                     </div>
                 </section>
-                <section id="cooks" className="section-cooks-month">
-                    <div className="container card-group index-cook-group">
+                <section id="cooks" className="section-cook-Highlight">
+                    <div className="container">
                         <div className='row'>
                             <h2>Cook Highlight</h2>
                         </div>
-                        <div className="row cook-row">
+                        <div className="row cookHighlight-row">
                             <RenderCookCard cook = {props.cooks.filter(cook => cook.featured)[0]}/>
                         </div>
-                        <Link to='/cooks'>Explore All Cooks</Link>
+                        <Link to='/cooks' className='explore-link'>Explore All Cooks</Link>
                     </div>
                 </section>
                 <section id='testimonials' className='testimonials'>
@@ -118,7 +116,7 @@ function Home(props){
                         <div className='row'>
                             <h2>Testimonials</h2>
                         </div>
-                        <div className="row test-row">
+                        <div className="row test-row card-group">
                             {TestDir}   
                         </div>
                     </div>

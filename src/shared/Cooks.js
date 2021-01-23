@@ -2,11 +2,11 @@ export const COOKS = [
     {cookName: "Christian Pullisic",
     cookNum:1,
     cuisine: "Mexican",
-    rating:3.5,
+    rating:3,
     cookImg: "/assets/images/chef1.jpg",
     alt:"cook 1 img",
     page:"cook1.html",
-    description:"lorem ipsum",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." ,
     featured:true,
     foodImg1: "/assets/images/food11.jpg",
     foodImg2: "/assets/images/food12.jpg",
@@ -20,7 +20,7 @@ export const COOKS = [
     foodImg1: "/assets/images/food21.jpg",
     foodImg2: "/assets/images/food22.jpg",
     page:"cook2.html",
-    description:"lorem ipsum",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." ,    
     featured:false
 
     },
@@ -33,7 +33,7 @@ export const COOKS = [
     foodImg1: "/assets/images/food31.jpg",
     foodImg2: "/assets/images/food32.jpg",
     page:"cook3.html",
-    description:"lorem ipsum",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     featured:true
     },
     {cookName: "Magdalena Eriksson",
@@ -45,8 +45,7 @@ export const COOKS = [
     foodImg1: "/assets/images/food41.jpg",
     foodImg2: "/assets/images/food42.jpg",
     page:"cook4.html",
-    description:"lorem ipsum",
+    description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", 
     featured:true
     }
 ]
-

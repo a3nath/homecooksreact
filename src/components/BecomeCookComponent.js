@@ -22,55 +22,52 @@ class becomeCook extends Component{
 
     render(){
         return (
-            <div class='container'>
-                <section className='becomeCook'>
+            <section className='becomeCook'>
+                <div class='container'>
                     <div className='row'>
                         <h2>Become Cook</h2>
                     </div>
-                    <div className='row'>
-                        <LocalForm onSubmit ={values => this.handleSubmit(values)}>
+                    <div className='form-row row'>
+                        <LocalForm className='becomeCookForm' onSubmit ={values => this.handleSubmit(values)}>
                             <div className='form-group'>
-                                <Label htmlfor='name'>Name</Label>
-                                <Control.text type='text' model='.name' id='name' name='name' className='form-control'
+                                <Label className='becomeCookLabel' htmlfor='name'></Label>
+                                <Control.text type='text' model='.name' id='name' name='name' className='form-control becomeCookInput' placeholder='Name'
                                 validators={{required}}/>
                                 <Errors
-                                className='text-danger'
-                                model='.name'
-                                component='div'
-                                messages={{
-                                    required:"Name is required"}}
+                                    className='text-danger'
+                                    model='.name'
+                                    component='div'
+                                    messages={{
+                                        required:"Name is required"}}
                                 />
                             </div>
                             <div className='form-group'>
-                                <Label htmlfor='location'>Location</Label>
-                                <Control.text type='text' model='.location' id='location' name='location' className='form-control' 
-                                validators={{
-                                    required,
-                                }}/>
+                                <Label className='becomeCookLabel' htmlfor='location'></Label>
+                                <Control.text type='text' model='.location' id='location' name='location' className='form-control becomeCookInput'  placeholder='Location'
+                                validators={{required}}/>
                                 <Errors className='text-danger' model='.password' component='div'
-                                messages={{
-                                    required:'Location is required'}}
+                                    messages={{
+                                        required:'Location is required'}}
                                 />
                             </div>
                             <div className='form-group'>
-                                <Label htmlfor='email'>Email Address</Label>
-                                <Control.text type='email' model='.email' id='email' name='email' className='form-control'
+                                <Label className='becomeCookLabel' htmlfor='email'></Label>
+                                <Control.text type='email' model='.email' id='email' name='email' className='form-control becomeCookInput' placeholder='Email'
                                 validators={{required, isEmail}}/>
                                 <Errors
-                                className='text-danger'
-                                model='.email'
-                                component='div'
-                                messages={{
-                                    required:"Email address is required",
-                                    isEmail: "Valid email address is required"
-                                }}
+                                    className='text-danger'
+                                    model='.email'
+                                    component='div'
+                                    messages={{
+                                        required:"Email address is required",
+                                        isEmail: "Valid email address is required"}}
                                 />
                             </div>
-                            <Button type='submit' className='btn btn-primary' color='primary'>Submit</Button>
+                            <Button type='submit' className='btn btn-primary becomeCookSubmit' color='primary'>Submit</Button>
                         </LocalForm>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         )}
 }
 
