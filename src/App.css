@@ -82,9 +82,6 @@ body{
     margin:0;
 }
 
-.navbar-row{
-    display: flex;
-}
 
 .navbar-nav{
     display: flex;
@@ -141,9 +138,9 @@ img{margin:0px;}
 /* .navbar-collapse{
     display: flex;
     justify-content: space-between;
-} */
+}
 
-/* .navbar-collapse>*{
+.navbar-collapse>*{
     margin:5px;
 } */
 

@@ -52,15 +52,15 @@ class Header extends Component {
     render(){
         return(
             <React.Fragment>
-                    <Navbar sticky="top" expand='md' color='dark' className='navbar'>
+                    <Navbar sticky="top" expand='md' color='dark'>
                         <div className='container'>
-                            <div className='row navbar-row'>
+                            <div className=''>
                                 <NavbarBrand className='navbar-logo' href='/' >
                                     <img src='/assets/images/logo-one.png' alt='logo image' className='logo'/>
                                 </NavbarBrand>
-                                {/* <NavbarToggler onClick = {this.toggleNav}/> */}
-                                <Collapse isOpen={this.state.isNavOpen} navbar className='navbar-nav'>
-                                    <Nav navbar className="mr-auto">
+                                <NavbarToggler onClick = {this.toggleNav}/>
+                                <Collapse isOpen={this.state.isNavOpen} navbar className=''>
+                                    <Nav navbar className="">
                                             <NavItem>
                                                 <NavLink className='nav-link' to='/home'>
                                                     Home
