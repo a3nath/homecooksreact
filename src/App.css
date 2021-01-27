@@ -144,16 +144,21 @@ img{margin:0px;}
     margin:5px;
 } */
 
-
+.nav-login{
+    position: absolute;
+    right:50px;
+}
 
 .loginBtn{
-    padding:5px;
+    padding:10px;
     border-radius: 2px;
     border:none;
     background-color: #201e24;
     color:#fff;
     display: flex;
     width: 90px;
+    text-align: center;
+    align-items: center;
 }
 
 .fa-sign-in{
@@ -210,24 +215,26 @@ img{margin:0px;}
     padding:20px;
 }
 
-.how-row, .test-row, .cook-row{
+.about-container>.media>*{
+    font-size: 4rem;
+}
+
+.about-media-body{
+    margin: 20px 0;
+}
+
+
+.test-row, .cook-row{
     display: flex;
     flex-wrap: wrap;
 }
 
-.test-card{
-    background-color: #fff;
-    border-radius: 4px;
-    padding: 25px;
-  
-}
-
+/* 
 .i-how{
     color: #FFF;
     font-size:8rem;
     height:40px;
-
-}
+} */
 
 /*  */
 
@@ -265,15 +272,11 @@ img{margin:0px;}
     color:#201e24
 }
 
-.cookHighlight-row{
-    display: flex;
-    flex-wrap: wrap;
-}
-
 
 .cookHighlight-card{
     border-radius: 5px;
     display: flex;
+    flex-direction: row;
 }
 
 .cookHighlight-card-body{
@@ -300,6 +303,12 @@ img{margin:0px;}
 
 .test-row{
     justify-content: space-evenly;
+}
+
+.test-card{
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 25px; 
 }
 
 /* cook directory */

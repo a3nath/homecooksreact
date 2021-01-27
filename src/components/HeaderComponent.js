@@ -54,7 +54,7 @@ class Header extends Component {
             <React.Fragment>
                     <Navbar sticky="top" expand='md' color='dark'>
                         <div className='container'>
-                            <div className=''>
+                            <div className='row'>
                                 <NavbarBrand className='navbar-logo' href='/' >
                                     <img src='/assets/images/logo-one.png' alt='logo image' className='logo'/>
                                 </NavbarBrand>
@@ -78,7 +78,7 @@ class Header extends Component {
                                             </NavItem>
 
                                     </Nav>
-                                    <span className='Navbar-text ml-auto nav-login'>
+                                    <span className='Navbar-text nav-login'>
                                             <Button onClick={this.toggleModal} className='loginBtn'>
                                                 <i className='fa fa-sign-in fa-lg'/>
                                                     Log in

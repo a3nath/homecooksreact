@@ -37,16 +37,14 @@ function RenderTestCard({test}){
 function RenderAboutMedia({media}){
     if (media){
         return(
-            <div>
                 <div className="about-container">
                     <div className="media">
                         <FontAwesomeIcon icon={media.icon}/>
-                        <div className="media-body">
+                        <div className="about-media-body media-body">
                             <h3>{media.title}</h3> 
                         </div>
                     </div>
                 </div>
-            </div>
     )}
     return <div></div>
 
