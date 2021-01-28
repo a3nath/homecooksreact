@@ -267,30 +267,50 @@ img{margin:0px;}
 }
 
 /* section cook highlight */
-.section-cooks-Highlight{
+
+.section-highlight{
     padding:80px 40px;
     color:#201e24
 }
 
+.highlight-row{
+    margin: 40px 0;
+}
 
-.cookHighlight-card{
+.highlight-carousel-container{
+    width: 50vw;
+}
+
+.highlight-card{
     border-radius: 5px;
     display: flex;
-    flex-direction: row;
+    width: 400px;
+    max-width: 50vw;
+    margin:0 120px;
+    background-color: transparent;
+
 }
 
-.cookHighlight-card-body{
-    margin: 0 50px;
-    padding: 0 20px;
+
+.cook-img{
+    max-width:100%;
+    width: 400px;
+    height: 400px; 
 }
 
-.cookHighlight-text{
+.highlight-text{
     text-align: left;
     margin: 4px 0;
 }
 
 .explore-link{
-    color:#201e24;
+    -webkit-text-fill-color: transparent;
+    background:linear-gradient(90deg, red, green);
+    margin: 20px;
+    padding: 20px;
+    color:transparent;
+    background-clip: text;
+    font-size: 2.4rem;
 
 }
 
@@ -313,11 +333,7 @@ img{margin:0px;}
 
 /* cook directory */
 
-.cook-img{
-    max-width:100%;
-    width: 300px;
-    height: 400px;
-}
+
 
 
 .cookdir-cardgroup{
