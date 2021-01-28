@@ -28,7 +28,7 @@ function RenderAboutMedia({media}){
         return(
                 <div className="about-container">
                     <div className="media">
-                        <FontAwesomeIcon icon={media.icon}/>
+                        <FontAwesomeIcon icon={media.icon} className='about-icon'/>
                         <div className="about-media-body media-body">
                             <h3>{media.title}</h3> 
                         </div>

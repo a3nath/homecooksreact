@@ -212,7 +212,20 @@ img{margin:0px;}
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:20px;
+    justify-content: space-evenly;
+    padding:40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #201e24;
+}
+
+.about-icon{
+    font-size: 2rem;
+    margin:10px;
+    color:#fb8b61;
+}
+
+.about-icon:hover{
+    color:#201e24;
 }
 
 .about-container>.media>*{
@@ -220,21 +233,13 @@ img{margin:0px;}
 }
 
 .about-media-body{
-    margin: 20px 0;
+    margin: 10px 0;
 }
-
 
 .test-row, .cook-row{
     display: flex;
     flex-wrap: wrap;
 }
-
-/* 
-.i-how{
-    color: #FFF;
-    font-size:8rem;
-    height:40px;
-} */
 
 /*  */
 
@@ -346,7 +351,7 @@ img{margin:0px;}
 }
 
 .allcooks-cook-card{
-    width: calc(100%);
+   background-color: transparent;
 }
 
 .carousel-img{
@@ -412,6 +417,7 @@ img{margin:0px;}
 .menu-card{
     display: flex;
     flex-direction: column;
+    background-color: transparent;
 }
 
 .menu-card-body{
@@ -562,9 +568,8 @@ i:hover{
     color:#fb8b61;
 }
 
-
-a:hover{
-    color:#fb8b61;
+a{
+    text-decoration: none;
 }
 
 .contact-link{
@@ -573,6 +578,7 @@ a:hover{
 
 ::selection{
     color:#fb8b61;
+    text-decoration: none;
 }
 
 

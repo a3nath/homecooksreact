@@ -29,17 +29,15 @@ function RenderCookReview({review}){
     return(
         <div className='card review-card'>
             <div className='card-body'>
-                <div className='card-title'>
-                    {review.id}
-                    <div class="card-subtitle mb-2 muted">
-                        {review.CustomerName}
-                    </div>
-                    <div class="card-text">
-                        {review.Description}
-                    </div>
+                <div className='card-title' className={review.id}>
+                    {review.Description}
+                </div>
+                <blockquote className="blockquote mb-0">
+                    <footer className="blockquote-footer">{review.CustomerName}</footer>   
+                </blockquote>
+                    
                 </div>
             </div>
-        </div>
     )
 }
 
