@@ -269,7 +269,8 @@ img{margin:0px;}
 /* section cook highlight */
 
 .section-highlight{
-    padding:80px 40px;
+    padding:80px 0;
+    padding-right: 40px;
     color:#201e24
 }
 
