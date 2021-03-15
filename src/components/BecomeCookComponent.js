@@ -30,7 +30,7 @@ class becomeCook extends Component{
                     <div className='form-row row'>
                         <LocalForm className='becomeCookForm' onSubmit ={values => this.handleSubmit(values)}>
                             <div className='form-group'>
-                                <Label className='becomeCookLabel' htmlfor='name'></Label>
+                                <Label className='becomeCookLabel' htmlFor='name'></Label>
                                 <Control.text type='text' model='.name' id='name' name='name' className='form-control becomeCookInput' placeholder='Name'
                                 validators={{required}}/>
                                 <Errors
@@ -42,7 +42,7 @@ class becomeCook extends Component{
                                 />
                             </div>
                             <div className='form-group'>
-                                <Label className='becomeCookLabel' htmlfor='location'></Label>
+                                <Label className='becomeCookLabel' htmlFor='location'></Label>
                                 <Control.text type='text' model='.location' id='location' name='location' className='form-control becomeCookInput'  placeholder='Location'
                                 validators={{required}}/>
                                 <Errors className='text-danger' model='.password' component='div'
@@ -51,7 +51,7 @@ class becomeCook extends Component{
                                 />
                             </div>
                             <div className='form-group'>
-                                <Label className='becomeCookLabel' htmlfor='email'></Label>
+                                <Label className='becomeCookLabel' htmlFor='email'></Label>
                                 <Control.text type='email' model='.email' id='email' name='email' className='form-control becomeCookInput' placeholder='Email'
                                 validators={{required, isEmail}}/>
                                 <Errors

@@ -18,19 +18,60 @@ const mapStateToProps = state => {
         menu: state.menu,
         review: state.review,
         images: state.images
-
     };
 };
 
 
 class Main extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            isNavOpen: false,
+            isModalOpen: false
+        }
+
+        this.toggleNavHandler = this.toggleNavHandler.bind(this);
+        this.toggleModalHandler = this.toggleModalHandler.bind(this);
+        this.loginHandler = this.loginHandler.bind(this);
+    }
+
+    componentDidMount(){
+        fetch(
+            'http://localhost:3000/campsites'
+        ).then(
+            data => data.json()
+        )
+        .then(
+            console.log('Check Did Mount')
+        )
+    }
+
+    toggleNavHandler = () => {
+        this.setState({
+            isNavOpen: !this.state.isNavOpen
+        })
+    }
+
+    toggleModalHandler = () => {
+        this.setState({
+            isModalOpen: ! this.state.isModalOpen
+        })
+    }
+
+    loginHandler = (values) => {
+        console.log("Current state is: " + JSON.stringify(values));
+        alert("Current state is: " + JSON.stringify(values));
+    }
+
+
     render (){
         const HomePage = () => {
             return(
                 <Home
-                about = {this.props.about}
-                cooks = {this.props.cooks}
-                testimonial = {this.props.testimonial}
+                    about = {this.props.about}
+                    cooks = {this.props.cooks}
+                    testimonial = {this.props.testimonial}
                 />
         )}
         const CookMenu = ({match}) => {
@@ -46,7 +87,7 @@ class Main extends Component {
 
         return(
             <div>
-                <Header/>
+                <Header onNav= {this.toggleNavHandler} onModal = {this.toggleModalHandler} onLogin={this.loginHandler} navOpen={this.state.isNavOpen} modalOpen={this.state.isModalOpen}/>
                 <Switch>
                     <Route exact path='/home' component={HomePage}/>
                     <Route exact path ='/cooks' render={() => <CookDir cooks={this.props.cooks}  menu={this.props.menu} images={this.props.images}/>}/>

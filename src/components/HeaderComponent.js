@@ -18,38 +18,39 @@ const maxLength = len => val => !val || (val.length <= len);
 const minLength = len => val => val && (val.length >= len);
 const isEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val)
 
-class Header extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            isNavOpen: false,
-            isModalOpen:false
-        };
+// class Header extends Component {
+//     constructor(props){
+//         super(props);
+//         this.state = {
+//             // isNavOpen: false,
+//             // isModalOpen:false
+//         };
 
-        this.toggleNav = this.toggleNav.bind(this);
-        this.toggleModal = this.toggleModal.bind(this);
-        this.handleLogin = this.handleLogin.bind(this);
-    }
+//         // this.toggleNav = this.toggleNav.bind(this);
+//         // this.toggleModal = this.toggleModal.bind(this);
+//         // this.handleLogin = this.handleLogin.bind(this);
+//     }
 
-    toggleNav(){
-        this.setState({
-            isNavOpen: !this.state.isNavOpen
-        });
-    }
+//     // toggleNav(){
+//     //     this.setState({
+//     //         isNavOpen: !this.state.isNavOpen
+//     //     });
+//     // }
 
-    toggleModal(){
-        this.setState({
-            isModalOpen: !this.state.isModalOpen
-        });
-    }
+//     // toggleModal(){
+//     //     this.setState({
+//     //         isModalOpen: !this.state.isModalOpen
+//     //     });
+//     // }
 
-    handleLogin(values){
-        console.log("Current state is: " + JSON.stringify(values));
-        alert("Current state is: " + JSON.stringify(values));
+//     // handleLogin(values){
+//     //     console.log("Current state is: " + JSON.stringify(values));
+//     //     alert("Current state is: " + JSON.stringify(values));
 
-    }
+//     // }
 
-    render(){
+//     render(){
+const Header = (props) => {
         return(
             <React.Fragment>
                     <Navbar sticky="top" expand='md' color='dark'>
@@ -58,8 +59,8 @@ class Header extends Component {
                                 <NavbarBrand className='navbar-logo' href='/' >
                                     <img src='/assets/images/logo-one.png' alt='logo image' className='logo'/>
                                 </NavbarBrand>
-                                <NavbarToggler onClick = {this.toggleNav}/>
-                                <Collapse isOpen={this.state.isNavOpen} navbar className=''>
+                                <NavbarToggler onClick = {props.onNav}/>
+                                <Collapse isOpen={props.navOpen} navbar className=''>
                                     <Nav navbar className="">
                                             <NavItem>
                                                 <NavLink className='nav-link' to='/home'>
@@ -79,7 +80,7 @@ class Header extends Component {
 
                                     </Nav>
                                     <span className='Navbar-text nav-login'>
-                                            <Button onClick={this.toggleModal} className='loginBtn'>
+                                            <Button onClick={props.onModal} className='loginBtn'>
                                                 <i className='fa fa-sign-in fa-lg'/>
                                                     Log in
                                             </Button>
@@ -88,12 +89,12 @@ class Header extends Component {
                             </div>
                         </div>
                     </Navbar>
-                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader toggle={this.toggleModal}> Login</ModalHeader>
+                <Modal isOpen={props.modalOpen} toggle={props.onModal}>
+                    <ModalHeader toggle={props.onModal}> Login</ModalHeader>
                     <ModalBody>
-                        <LocalForm onSubmit={value => this.handleLogin(value)}>
+                        <LocalForm onSubmit={value => props.onLogin(value)}>
                             <div className='form-group'>
-                                <Label htmlfor='email'>Email Address</Label>
+                                <Label htmlFor='email'>Email Address</Label>
                                 <Control.text type='email' model='.email' id='email' name='email' className='form-control'
                                 validators={{required, isEmail}}/>
                                 <Errors
@@ -107,7 +108,7 @@ class Header extends Component {
                                 />
                             </div>
                             <div className='form-group'>
-                                <Label htmlfor='password'>Password</Label>
+                                <Label htmlFor='password'>Password</Label>
                                 <Control.text type='password' model='.password' id='password' name='password' className='form-control' 
                                 validators={{
                                     required,
@@ -128,6 +129,6 @@ class Header extends Component {
                 </Modal>
             </React.Fragment>
         )}
-}
+// }
 
 export default Header

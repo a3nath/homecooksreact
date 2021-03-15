@@ -41,7 +41,7 @@ function RenderAboutMedia({media}){
 
 function RenderCookHighlight(props){
     return( 
-        <div class='highlight-row row'>
+        <div className='highlight-row row'>
             <div className='highlight-carousel-container'>
                 <CarouselProvider 
                     naturalSlideWidth={50}
@@ -62,7 +62,7 @@ function RenderCookHighlight(props){
              
             <Card className='highlight-card'>
                 <CardImg width='100%' src={props.cook.cookImg} alt={props.cook.cookName} className='img-fluid d-block cook-highlight-img cook-img card-img-top'/>
-                <CardBody className='highlight-card-body'y>
+                <CardBody className='highlight-card-body'>
                     <CardTitle className='card-title cook-name cookHighlight-text'> 
                         <h3>{props.cook.cookName}</h3>
                     </CardTitle>
@@ -84,7 +84,7 @@ function RenderTestCard({test}){
         return(
          <div className="card test-card">
              <div className="card-body">
-                 <blockquote class="blockquote mb-0">
+                 <blockquote className="blockquote mb-0">
                      <p>{test.description}</p>
                      <footer className="blockquote-footer">{test.name}</footer>
                  </blockquote>

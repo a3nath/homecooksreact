@@ -1,28 +1,28 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import {Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label} from 'reactstrap';
-import {NavLink} from 'react-router-dom';
-import { Control, LocalForm, Errors } from 'react-redux-form';
+// import {Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label} from 'reactstrap';
+// import {NavLink} from 'react-router-dom';
+// import { Control, LocalForm, Errors } from 'react-redux-form';
 
+// const required = val => val && val.length > 1;
+// const maxLength = len => val => !val || (val.length <= len);
+// const minLength = len => val => val && (val.length >= len);
+// const isEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
+// class Footer extends Component{
+    // constructor(props){
+    //     super(props);
+    //     this.handleSubmit = this.handleSubmit.bind(this);
+    // }
 
-const required = val => val && val.length > 1;
-const maxLength = len => val => !val || (val.length <= len);
-const minLength = len => val => val && (val.length >= len);
-const isEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
+    // handleSubmit(values){
+    //     console.log("Current state is: " + JSON.stringify(values));
+    //     alert("Current state is: " + JSON.stringify(values));
+    // }
 
-class Footer extends Component{
-    constructor(props){
-        super(props);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+    // render(){
 
-    handleSubmit(values){
-        console.log("Current state is: " + JSON.stringify(values));
-        alert("Current state is: " + JSON.stringify(values));
-    }
-
-    render(){
+const Footer = (props) => {
         return(
                 <footer className='site-footer'>
                     <div className='container'>
@@ -31,7 +31,7 @@ class Footer extends Component{
                                 <h4>Links</h4>
                                 <ul className='footer-list-link footer-list'>
                                     <li><Link to='/home' className='footer-link'>Home</Link></li>
-                                    <li><Link to='/coonks' className='footer-link'>Cooks</Link></li>
+                                    <li><Link to='/cooks' className='footer-link'>Cooks</Link></li>
                                     <li><Link to='/becomecook' className='footer-link'>Become Cook</Link></li>
                                 </ul>
                             </div>
@@ -68,7 +68,7 @@ class Footer extends Component{
                 </footer>
             )
     }
-}
+// }
 
 
 export default Footer;
