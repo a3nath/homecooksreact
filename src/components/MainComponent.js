@@ -31,9 +31,9 @@ class Main extends Component {
             isModalOpen: false
         }
 
-        this.toggleNavHandler = this.toggleNavHandler.bind(this);
-        this.toggleModalHandler = this.toggleModalHandler.bind(this);
-        this.loginHandler = this.loginHandler.bind(this);
+        // this.toggleNavHandler = this.toggleNavHandler.bind(this);
+        // this.toggleModalHandler = this.toggleModalHandler.bind(this);
+        // this.loginHandler = this.loginHandler.bind(this);
     }
 
     componentDidMount(){
