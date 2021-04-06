@@ -78,9 +78,9 @@ class Main extends Component {
             return (
                 <CookPage 
                     // 1 cook who matches the clicked cook
-                    cook={this.props.cooks.filter(cook => cook.cookNum === +match.params.cookNum)[0]}  
-                    menu= {this.props.menu.filter(item => item.cookNum === +match.params.cookNum)}
-                    review = {this.props.review.filter(rev => rev.cookNum === +match.params.cookNum)}         
+                    cook={this.props.cooks.filter(cook => cook.cookNum == +match.params.cookNum)[0]}  
+                    menu= {this.props.menu.filter(item => item.cookNum == +match.params.cookNum)}
+                    review = {this.props.review.filter(rev => rev.cookNum == +match.params.cookNum)}         
                 />
             )
         }
