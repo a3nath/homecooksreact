@@ -10,17 +10,6 @@ import { connect } from 'react-redux';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap-social/bootstrap-social.css';
 
-const mapStateToProps = state => {
-    return {
-        cooks: state.cooks,
-        about: state.about,
-        testimonial: state.testimonial,
-        menu: state.menu,
-        review: state.review,
-        images: state.images
-    };
-};
-
 
 class Main extends Component {
 
@@ -100,5 +89,16 @@ class Main extends Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        cooks: state.cooks,
+        about: state.about,
+        testimonial: state.testimonial,
+        menu: state.menu,
+        review: state.review,
+        images: state.images
+    };
+};
 
 export default withRouter(connect(mapStateToProps)(Main));

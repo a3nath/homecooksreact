@@ -53,7 +53,7 @@ const isEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val)
 const Header = (props) => {
         return(
             <React.Fragment>
-                    <Navbar sticky="top" expand='md' color='dark'>
+                    <Navbar sticky="top" expand='md'>
                         <div className='container'>
                             <div className='row'>
                                 <NavbarBrand className='navbar-logo' href='/' >
