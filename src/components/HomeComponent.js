@@ -145,7 +145,7 @@ function Home(props){
             <div className='grad-sect'>
                 <section className="about" id="about">
                     <div className="container">
-                            <h2 className='title-row'>How it works</h2>
+                            <h2 className='title-row'>HOW IT WORKS</h2>
                         <div className="row how-row">
                             {AboutDir}
                         </div>
@@ -153,14 +153,13 @@ function Home(props){
                 </section>
                 <section id="cooks" className="section-highlight">
                     <div className="container">
-                        <h2 className='title-row'>Cook Highlight</h2>
+                        <h2 className='title-row'>COOK HIGHLIGHT</h2>
                     </div>
                         <RenderCookHighlight cook = {props.cooks.filter(cook => cook.featured)[0]}/>
-                        <Link to='/cooks' className='explore-link'>Explore All Cooks</Link>
                 </section>
                 <section id='testimonials' className='testimonials'>
                     <div className="container">
-                        <h2 className='title-row'>Testimonials</h2>
+                        <h2 className='title-row'>TESTIMONIALS</h2>
                       <div className="row test-row card-group">
                             {TestDir}   
                         </div>
