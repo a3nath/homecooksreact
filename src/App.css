@@ -206,8 +206,6 @@ img{
 
 .card{
     border:none;
-    margin:10px 20px;
-    padding:15px;
 }
 
 .card-body{
@@ -257,7 +255,7 @@ img{
 }
 
 .highlight-card-body{
-    background-color: wheat;
+    /* background-color: wheat; */
 }
 
 .cook-img{
@@ -271,7 +269,10 @@ img{
     margin: 4px 0;
 }
 
-.explore-link{
+.highlight-row .carousel-high-img{
+    height: 100%
+}
+/* .explore-link{
     -webkit-text-fill-color: transparent;
     background:linear-gradient(90deg, red, green);
     margin: 20px;
@@ -282,7 +283,7 @@ img{
     text-align: center;
     display: block;
 
-}
+} */
 
 /* testimonial */
 
@@ -299,6 +300,7 @@ img{
     background-color: #fff;
     border-radius: 4px;
     padding: 25px; 
+    margin: 0 25px;
 }
 
 /* cook directory */
