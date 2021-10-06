@@ -63,11 +63,11 @@ function RenderCookHighlight(props){
             <Card className='highlight-card'>
                 <CardImg width='100%' src={props.cook.cookImg} alt={props.cook.cookName} className='img-fluid d-block cook-highlight-img cook-img card-img-top'/>
                 <CardBody className='highlight-card-body'>
-                    <CardTitle className='card-title cook-name cookHighlight-text'> 
+                    <CardTitle className='cook-name highlight-text'> 
                         <h3>{props.cook.cookName}</h3>
                     </CardTitle>
-                    <CardText className='highlight-text'>
-                        {props.cook.cuisine}
+                    <CardText className='cuisine highlight-text'>
+                        <h4>{props.cook.cuisine}</h4>
                     </CardText>
                     <CardText className='highlight-text'>
                         {props.cook.description.slice(0,200)}

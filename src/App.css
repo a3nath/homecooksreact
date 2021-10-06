@@ -245,6 +245,10 @@ img{
     width: 50vw;
 }
 
+.highlight-row .carousel-high-img{
+    height: 80%
+}
+
 .highlight-card{
     border-radius: 5px;
     display: flex;
@@ -254,14 +258,20 @@ img{
     background-color: transparent;
 }
 
-.highlight-card-body{
-    /* background-color: wheat; */
-}
-
 .cook-img{
     max-width:100%;
     width: 400px;
     height: 400px; 
+}
+
+.cook-name.highlight-text{
+    text-align: center;
+    width: 100%;
+}
+
+.cuisine.highlight-text{
+    text-align: center;
+    width:100%;
 }
 
 .highlight-text{
@@ -269,9 +279,7 @@ img{
     margin: 4px 0;
 }
 
-.highlight-row .carousel-high-img{
-    height: 100%
-}
+
 /* .explore-link{
     -webkit-text-fill-color: transparent;
     background:linear-gradient(90deg, red, green);
@@ -293,14 +301,17 @@ img{
 }
 
 .test-row{
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .test-card{
     background-color: #fff;
     border-radius: 4px;
     padding: 25px; 
-    margin: 0 25px;
+    margin: 10px 10px;
+
 }
 
 /* cook directory */
@@ -377,6 +388,8 @@ img{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 100%;
+    justify-content: center;
 }
 
 .cook-media-text{
@@ -404,21 +417,6 @@ img{
     color:red;
 }
 
-
-.cook-review{
-    padding:80px 40px;
-}
-
-.review-card {
-   border-radius: 4px;
-   background-color: #fff;
-}
-
-.test-card-container, .cook-review-container{
-    width:25%;
-}
-
-
 .media-body > *{
     margin: 15px 0;
 }
@@ -429,7 +427,35 @@ img{
 
 .cook-menu-group{
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
+
+.cook-menu-container{
+    margin: 10px;
+}
+
+.review-row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cook-review{
+    padding:80px 40px;
+}
+
+.review-card {
+   border-radius: 4px;
+   background-color: #fff;
+   margin: 5px;
+}
+
+/* .test-card-container, .cook-review-container{
+    max-width:25%;
+} */
+
+
 
 
 /* become cook */
