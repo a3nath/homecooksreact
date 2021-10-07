@@ -79,17 +79,17 @@ const Header = (props) => {
                                             </NavItem>
 
                                     </Nav>
-                                    <span className='Navbar-text nav-login'>
+                                    {/* <span className='Navbar-text nav-login'>
                                             <Button onClick={props.onModal} className='loginBtn'>
                                                 <i className='fa fa-sign-in fa-lg'/>
                                                     Log in
                                             </Button>
-                                    </span>
+                                    </span> */}
                                 </Collapse>
                             </div>
                         </div>
                     </Navbar>
-                <Modal isOpen={props.modalOpen} toggle={props.onModal}>
+                {/* <Modal isOpen={props.modalOpen} toggle={props.onModal}>
                     <ModalHeader toggle={props.onModal}> Login</ModalHeader>
                     <ModalBody>
                         <LocalForm onSubmit={value => props.onLogin(value)}>
@@ -126,7 +126,7 @@ const Header = (props) => {
                             <Button type='submit' color='dark'>Login</Button>
                         </LocalForm>
                     </ModalBody>
-                </Modal>
+                </Modal> */}
             </React.Fragment>
         )}
 // }

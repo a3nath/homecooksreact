@@ -163,6 +163,8 @@ img{
 
 .title-row{
     text-align: center;
+    font-weight: 600;
+    color: #fb8b61;
 }
 
 .about{
@@ -320,11 +322,13 @@ img{
 
 
 .cookdir-cardgroup{
-    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .cook-card-container{
-    width:calc(100%/3.5);
+    justify-content: space-evenly;
+    margin: 10px;
 }
 
 .allcooks-cook-card{
@@ -427,7 +431,7 @@ img{
 
 .cook-menu-group{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -437,7 +441,7 @@ img{
 
 .review-row{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -571,7 +575,7 @@ a{
 }
 
 ::selection{
-    color:#fb8b61;
+    color:#000;
     text-decoration: none;
 }
 

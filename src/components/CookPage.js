@@ -102,7 +102,7 @@ function CookPage(props){
             </section>
             <section className='cook-menu'>
                 <div className='container'>
-                        <h2 className='title-row'>Menu</h2>
+                        <h2 className='title-row'>MENU</h2>
                     <div className='card-group cook-menu-group row'>
                         {CookMenu}
                     </div>     
@@ -111,7 +111,7 @@ function CookPage(props){
             <section className='cook-review'>
                 <div className='container'>
                         <h2 className='title-row'>
-                            Customer Reviews
+                            CUSTOMER REVIEWS
                         </h2>
                     <div className='row review-row card-group'>
                         {CookReview}
