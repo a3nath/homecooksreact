@@ -282,18 +282,7 @@ img{
 }
 
 
-/* .explore-link{
-    -webkit-text-fill-color: transparent;
-    background:linear-gradient(90deg, red, green);
-    margin: 20px;
-    padding: 20px;
-    color:transparent;
-    background-clip: text;
-    font-size: 2.4rem;
-    text-align: center;
-    display: block;
 
-} */
 
 /* testimonial */
 
@@ -328,7 +317,8 @@ img{
 
 .cook-card-container{
     justify-content: space-evenly;
-    margin: 10px;
+    margin: 15px;
+    width: 33%;
 }
 
 .allcooks-cook-card{
@@ -341,9 +331,13 @@ img{
 
 .carousel-img{
     width: 100%;
-    height: 300px;
+    height: 100%;
     border-radius: 5px;
     padding-bottom: 0;
+}
+
+.carousel-high-img{
+    height: 300px;
 }
 
 
@@ -543,7 +537,8 @@ img{
 .footer-list-social{
     display:flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
+
 }
 
 .footer-link{

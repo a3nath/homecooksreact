@@ -52,26 +52,26 @@ export const REVIEW = [
     },
     {
         id:9,
-        CookNum:3,
+        cookNum:3,
         CustomerName:"Lorem ipsum",
         Description:"Lorem ipsum",
     },
     {
         id:10,
-        CookNum:4,
+        cookNum:4,
         CustomerName:"Lorem ipsum",
         Description:"Lorem ipsum",
 
     },
     {
         id:11,
-        CookNum:4,
+        cookNum:4,
         CustomerName:"Lorem ipsum",
         Description:"Lorem ipsum",
     },
     {
         id:12,
-        CookNum:4,
+        cookNum:4,
         CustomerName:"Lorem ipsum",
         Description:"Lorem ipsum",
     }

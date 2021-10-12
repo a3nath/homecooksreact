@@ -17,11 +17,11 @@ export const COOKS = [
     rating:4.8,
     cookImg: "/assets/images/chef2.jpg",
     alt:"cook 2 img",
-    foodImg1: "/assets/images/food21.jpg",
-    foodImg2: "/assets/images/food22.jpg",
     page:"cook2.html",
     description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." ,    
-    featured:false
+    featured:false,
+    foodImg1: "/assets/images/food21.jpg",
+    foodImg2: "/assets/images/food22.jpg",
 
     },
     {cookName: "Ji So-yun",
@@ -30,11 +30,11 @@ export const COOKS = [
     rating:5,
     cookImg: "/assets/images/chef3.jpg",
     alt:"cook 3 img",
-    foodImg1: "/assets/images/food31.jpg",
-    foodImg2: "/assets/images/food32.jpg",
     page:"cook3.html",
     description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    featured:true
+    featured:true,
+    foodImg1: "/assets/images/food31.jpg",
+    foodImg2: "/assets/images/food32.jpg"
     },
     {cookName: "Magdalena Eriksson",
     cookNum:4,
@@ -42,10 +42,10 @@ export const COOKS = [
     rating:4.2,
     cookImg: "/assets/images/chef4.jpg",
     alt:"cook 4 img",
-    foodImg1: "/assets/images/food41.jpg",
-    foodImg2: "/assets/images/food42.jpg",
     page:"cook4.html",
     description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", 
-    featured:true
+    featured:true,
+    foodImg1: "/assets/images/food41.jpg",
+    foodImg2: "/assets/images/food42.jpg"
     }
 ]
