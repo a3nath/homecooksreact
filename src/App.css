@@ -449,37 +449,30 @@ img{
    margin: 5px;
 }
 
-/* .test-card-container, .cook-review-container{
-    max-width:25%;
-} */
-
-
-
-
 /* become cook */
 
 .becomeCook{
-    background: linear-gradient(180deg, #fff,#dbe5ea);
+    background: linear-gradient(180deg, #dbe5ea,#bbcdd6);
     padding: 80px 40px;
 }
 
 .becomeCookForm{
-    background-color: #bbcdd6;
-    border-radius:5px;
-    box-shadow: 12px 12px 2px 1px rgba(255, 255, 255, .5);
-    padding: 50px 80px;
-    border: solid #7d7d90;
+    background-color: #f5f5f5;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 0 auto;
+    margin: 20px auto;
     width: 40%;;
+    border:solid #fff;
 }
 
 .form-group{
     padding:10px;
     margin: 0 auto;
+    width: 80%;
+    height: 100px;
 }
 
 
@@ -489,13 +482,15 @@ img{
 }
 
 .becomeCookInput{
-    padding:5px;
+    padding:20px;
+    border: solid #bbcdd6;
 }
 
 .becomeCookSubmit{
     padding:8px 16px;
     border-radius: 3px;
     margin: 0 auto;
+    width: 20%;
 }
 
 .text-danger{
