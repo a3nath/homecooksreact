@@ -1,16 +1,10 @@
 import React from 'react';
-import {Card, CardImg, CardBody, CardText, CardTitle, Jumbotron, Carousel} from 'reactstrap';
+import {Card, CardImg, CardBody, CardText, CardTitle, Jumbotron} from 'reactstrap';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap-social/bootstrap-social.css';
-import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-
-// import {faSearch} from '@fortawesome/free-solid-svg-icons';
-// import {faUtensils} from '@fortawesome/free-solid-svg-icons';
-// import {faShippingFast} from '@fortawesome/free-solid-svg-icons';
-
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 
 let backstyle = {
     width:"100%",
@@ -20,8 +14,6 @@ let backstyle = {
     left:'0',
     backgroundSize:'cover'
 }
-
-
 
 function RenderAboutMedia({media}){
     if (media){
@@ -36,7 +28,6 @@ function RenderAboutMedia({media}){
                 </div>
     )}
     return <div></div>
-
 }
 
 function RenderCookHighlight(props){
@@ -66,16 +57,13 @@ function RenderCookHighlight(props){
                     <CardTitle className='cook-name highlight-text'> 
                         <h3>{props.cook.cookName}</h3>
                     </CardTitle>
-                    <CardText className='cuisine highlight-text'>
-                        <h4>{props.cook.cuisine}</h4>
-                    </CardText>
+                        <h4 className='cuisine highlight-text'>{props.cook.cuisine}</h4>
                     <CardText className='highlight-text'>
                         {props.cook.description.slice(0,200)}
                     </CardText>
                 </CardBody>
         </Card>
         </div>
-        
     )
 }
 
@@ -92,30 +80,8 @@ function RenderTestCard({test}){
          </div>
      )}
     return <div></div>
- }
+}
  
-
-// function RenderHiglightCarousel(props){
-//     return(
-//         <CarouselProvider
-//         naturalSlideWidth={50}
-//         naturalSlideHeight={50}
-//         totalSlides={3}
-//         isPlaying={true}
-//         interval={5000}
-//         >
-//             <Slider>
-//                 <Slide index={0}>
-//                     <img className='carousel-img' src={props.item.foodImg1} alt='second food image'/>
-//                 </Slide>
-//                 <Slide index={1}>
-//                     <img className='carousel-img' src={props.item.foodImg2} alt='second food image'/>
-//                 </Slide>
-//             </Slider>  
-//         </CarouselProvider> 
-//     )
-// }
-
 function Home(props){
     const AboutDir = props.about.map(media =>{ 
         return(
@@ -131,13 +97,6 @@ function Home(props){
             </div>
         )
     })
-    // const CookHighlightCarousel = props.cooks.map(item => {
-    //     return(
-    //         <div className='cookHighlight-Carousel' key={item.cookNum}>
-    //             <RenderHiglightCarousel item={item}/>
-    //         </div>
-    //     )
-    // })
 
     return(
         <React.Fragment>

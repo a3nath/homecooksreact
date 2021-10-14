@@ -1,8 +1,4 @@
 import React from 'react';
-import {Card, CardImg, CardBody, CardText, CardTitle} from 'reactstrap';
-import {Link} from 'react-router-dom';
-import FontAwesome from 'react-fontawesome';
-import faStyles from 'font-awesome/css/font-awesome.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faPepperHot } from '@fortawesome/free-solid-svg-icons';

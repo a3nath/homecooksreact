@@ -1,10 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import {Carousel} from 'reactstrap';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-
-
 
 function RenderCookCard(props){
     return(
@@ -43,13 +40,11 @@ function RenderCookCard(props){
 }
 
 function CookDir(props) {
-
     const CookRow =  props.cooks.map(cook => {
         return(
                 <div className='cook-card-container' key={cook.cookNum}>
                     <RenderCookCard cook={cook}/>
-                </div>
-                
+                </div>  
         )
     })
 
@@ -64,4 +59,4 @@ function CookDir(props) {
     )
 };
 
-export default CookDir
+export default CookDir;

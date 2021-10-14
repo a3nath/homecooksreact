@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Button,Label} from 'reactstrap';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 
-
 const required = val => val && val.length > 0;
 const maxLength = len => val => !val || (val.length <= len);
 const minLength = len => val => val && (val.length >= len);
@@ -70,7 +69,8 @@ class becomeCook extends Component{
                     </div>
                 </div>
             </section>
-        )}
+        )
+    }
 }
 
 export default becomeCook;

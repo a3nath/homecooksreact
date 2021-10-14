@@ -1,55 +1,17 @@
-import React, {Component} from 'react';
-import {Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label} from 'reactstrap';
-import {NavLink, Link} from 'react-router-dom';
-import { Control, LocalForm, Errors } from 'react-redux-form';
+import React from 'react';
+import {Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem} from 'reactstrap';
+import {NavLink} from 'react-router-dom';
+
+// let backstyle = {
+//     width:"100%",
+//     height:"100vh",
+//     backgroundImage:  `url('${process.env.PUBLIC_URL}assets/images/cover.jpg')`,
+//     top:'0',
+//     left:'0',
+//     backgroundSize:'cover'
+// }
 
 
-let backstyle = {
-    width:"100%",
-    height:"100vh",
-    backgroundImage:  `url('${process.env.PUBLIC_URL}assets/images/cover.jpg')`,
-    top:'0',
-    left:'0',
-    backgroundSize:'cover'
-}
-
-const required = val => val && val.length > 1;
-const maxLength = len => val => !val || (val.length <= len);
-const minLength = len => val => val && (val.length >= len);
-const isEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val)
-
-// class Header extends Component {
-//     constructor(props){
-//         super(props);
-//         this.state = {
-//             // isNavOpen: false,
-//             // isModalOpen:false
-//         };
-
-//         // this.toggleNav = this.toggleNav.bind(this);
-//         // this.toggleModal = this.toggleModal.bind(this);
-//         // this.handleLogin = this.handleLogin.bind(this);
-//     }
-
-//     // toggleNav(){
-//     //     this.setState({
-//     //         isNavOpen: !this.state.isNavOpen
-//     //     });
-//     // }
-
-//     // toggleModal(){
-//     //     this.setState({
-//     //         isModalOpen: !this.state.isModalOpen
-//     //     });
-//     // }
-
-//     // handleLogin(values){
-//     //     console.log("Current state is: " + JSON.stringify(values));
-//     //     alert("Current state is: " + JSON.stringify(values));
-
-//     // }
-
-//     render(){
 const Header = (props) => {
         return(
             <React.Fragment>
@@ -128,7 +90,6 @@ const Header = (props) => {
                     </ModalBody>
                 </Modal> */}
             </React.Fragment>
-        )}
-// }
-
+    )
+}
 export default Header

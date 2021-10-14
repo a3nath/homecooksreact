@@ -244,7 +244,8 @@ img{
 }
 
 .highlight-carousel-container{
-    width: 50vw;
+    max-width: 50vw;
+    width:600px;
 }
 
 .highlight-row .carousel-high-img{
@@ -255,7 +256,7 @@ img{
     border-radius: 5px;
     display: flex;
     width: 400px;
-    max-width: 50vw;
+    max-width: 30vw;
     margin:0 120px;
     background-color: transparent;
 }
@@ -570,4 +571,8 @@ a{
 }
 
 
-
+@media screen and (max-width: 1400px){
+    .highlight-row{
+        flex-wrap: wrap;
+    }
+}
