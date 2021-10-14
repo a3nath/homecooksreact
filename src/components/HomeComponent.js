@@ -34,7 +34,7 @@ function RenderCookHighlight(props){
     return( 
         <div className='highlight-row row'>
             <div className='highlight-carousel-container'>
-                <CarouselProvider 
+                <CarouselProvider className='highlight-carousel'
                     naturalSlideWidth={50}
                     naturalSlideHeight={50}
                     totalSlides={2}

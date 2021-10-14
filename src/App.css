@@ -241,11 +241,16 @@ img{
 
 .highlight-row{
     margin: 40px 0;
+    flex-wrap: nowrap;
 }
 
 .highlight-carousel-container{
     max-width: 50vw;
-    width:600px;
+    width:50vw;
+}
+
+.highlight-carousel{
+    height: 100%;
 }
 
 .highlight-row .carousel-high-img{
@@ -257,14 +262,24 @@ img{
     display: flex;
     width: 400px;
     max-width: 30vw;
-    margin:0 120px;
+    margin:0 120px 0 300px;
     background-color: transparent;
+    height: 100%;
 }
 
 .cook-img{
     max-width:100%;
     width: 400px;
     height: 400px; 
+}
+
+.cook-highlight-img.cook-img{
+    height: 450%;
+    
+}
+
+.highlight-card-body{
+    max-height: 40%;
 }
 
 .cook-name.highlight-text{
@@ -571,7 +586,7 @@ a{
 }
 
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 800px){
     .highlight-row{
         flex-wrap: wrap;
     }
