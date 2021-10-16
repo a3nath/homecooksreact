@@ -254,7 +254,7 @@ img{
 }
 
 .highlight-row .carousel-high-img{
-    height: 80%
+    height: 100%
 }
 
 .highlight-card{
@@ -262,9 +262,13 @@ img{
     display: flex;
     width: 400px;
     max-width: 30vw;
-    margin:0 120px 0 300px;
+    margin-top:0;
+    margin-bottom: 0;
+    margin-left: 10%;
+    margin-right: 20%;
     background-color: transparent;
     height: 100%;
+    background-origin: border-box;
 }
 
 .cook-img{
