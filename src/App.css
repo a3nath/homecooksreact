@@ -255,26 +255,21 @@ img{
     height: 100%;
 }
 
-.highlight-row .carousel-high-img{
-    height: 800px;
+.carousel-slider{
+    height: 100%;
 }
+
 
 .highlight-card{
     border-radius: 5px;
     display: flex;
-    width: 400px;
-    max-width: 30vw;
-    margin-top:0;
-    margin-bottom: 0;
-    margin-left: 18%;
     background-color: transparent;
     height: 100%;
     background-origin: border-box;
-}
+} 
 
 .cook-img{
     max-width:100%;
-    width: 400px;
     height: 350px; 
 }
 
@@ -590,9 +585,42 @@ a{
     text-decoration: none;
 }
 
+@media screen and (min-width:800px){
+    .highlight-row .carousel-high-img{
+        height: 800px;
+    }    
+    .highlight-carousel-container{
+        max-width: 50vw;
+        width:40vw;
+    }
+    .highlight-card{
+        width: 400px;
+        max-width: 30vw;
+        margin-top:0;
+        margin-bottom: 0;
+        margin-left: 18%;
+    } 
+    .cook-img{
+        width: 400px;
+    }
+}
+
 
 @media screen and (max-width: 800px){
     .highlight-row{
         flex-wrap: wrap;
     }
+    .highlight-carousel-container{
+        width: 50vw;
+        max-width: 50vw;
+        height: 600px;
+        margin: 0 auto;
+    }
+    .highlight-card{
+        margin: auto auto;
+        width: 50vw;
+        max-width: 50vw;
+        height: 600px;
+    }
 }
+

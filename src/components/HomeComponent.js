@@ -40,7 +40,7 @@ function RenderCookHighlight(props){
                     totalSlides={2}
                     isPlaying={true}
                     interval={5000}>
-                    <Slider>
+                    <Slider className='carousel-slider'>
                         <Slide index={0}>
                             <img className='carousel-img carousel-high-img' src={props.cook.foodImg1} alt='cook food image 1'/>
                         </Slide>
