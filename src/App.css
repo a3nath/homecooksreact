@@ -168,7 +168,7 @@ img{
 }
 
 .about{
-    padding: 160px 40px;
+    padding: 80px 40px;
     color:#201e24;
 }
 
@@ -242,7 +242,6 @@ img{
 .highlight-row{
     margin: 40px 0;
     flex-wrap: nowrap;
-    height: 800px;
 }
 
 .highlight-carousel-container{
@@ -592,6 +591,7 @@ a{
     .highlight-carousel-container{
         max-width: 50vw;
         width:40vw;
+        height: 800px;
     }
     .highlight-card{
         width: 400px;
@@ -613,11 +613,10 @@ a{
     .highlight-carousel-container{
         width: 50vw;
         max-width: 50vw;
-        height: 600px;
-        margin: 0 auto;
+        margin: 0 auto 20px auto;
     }
     .highlight-card{
-        margin: auto auto;
+        margin: 20px auto;
         width: 50vw;
         max-width: 50vw;
         height: 600px;

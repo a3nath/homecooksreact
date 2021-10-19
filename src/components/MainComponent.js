@@ -25,16 +25,13 @@ class Main extends Component {
         // this.loginHandler = this.loginHandler.bind(this);
     }
 
-    componentDidMount(){
-        fetch(
-            'http://localhost:3000/campsites'
-        ).then(
-            data => data.json()
-        )
-        .then(
-            console.log('Check Did Mount')
-        )
-    }
+    // componentDidMount(){
+    //     fetch(
+    //         'http://localhost:3000/campsites'
+    //     ).then(
+    //         data => data.json()
+    //     )
+    // }
 
     toggleNavHandler = () => {
         this.setState({
