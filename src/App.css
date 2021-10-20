@@ -334,6 +334,7 @@ img{
     justify-content: space-evenly;
     margin: 15px;
     width: 33%;
+    min-width: 200px;
 }
 
 .allcooks-cook-card{
