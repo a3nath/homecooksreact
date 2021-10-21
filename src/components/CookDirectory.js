@@ -1,7 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
+function IconMultiply(props){
+    let count = props.count
+    let icon = props.icon
+    let iconArr = []
+    for (let i = 0; i < count; i++ ){
+        iconArr.push(icon)
+    }
+    return iconArr
+}
 
 function RenderCookCard(props){
     return(
@@ -31,7 +44,9 @@ function RenderCookCard(props){
                             <h4 className='cook-name carousel-text'>{props.cook.cookName}</h4>
                             <p className='card-text cuisine-name carousel-text'>{props.cook.cuisine}</p>
                             <p className='card-text carousel-text'>{props.cook.description.slice(0,50)}</p>
-                            <p className='card-text carousel-text'>{props.cook.rating}</p>
+                            <div className='cook-rating cook-media-text ratingIcon'>
+                                <IconMultiply className='card-text carousel-text' count={props.cook.rating} icon={<FontAwesomeIcon icon={faStar}/>}/>
+                            </div>
                         </div>
                 </Link>
             </div>

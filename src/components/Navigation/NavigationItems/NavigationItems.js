@@ -1,26 +1,22 @@
 import React from 'react';
-import {Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem} from 'reactstrap';
-import {NavLink} from 'react-router-dom';
 
-// let backstyle = {
-//     width:"100%",
-//     height:"100vh",
-//     backgroundImage:  `url('${process.env.PUBLIC_URL}assets/images/cover.jpg')`,
-//     top:'0',
-//     left:'0',
-//     backgroundSize:'cover'
-// }
+import classes from './NavigationItems.module.css';
+import NavigationItem from './NavigationItem/NavigationItem';
+
 
 
 const navigationItems = (props) => {
         return(
             <React.Fragment>
-                    <Navbar sticky="top" expand='md'>
+                <ul className={classes.NavigationItems}>
+                    <NavigationItem link='/home'> Home</NavigationItem>
+                    <NavigationItem link='/cooks'> Cooks</NavigationItem>
+                    <NavigationItem link='/becomecook'> Become Cook</NavigationItem>
+                </ul>
+
+                    {/* <Navbar sticky="top" expand='md'>
                         <div className='container'>
                             <div className='row'>
-                                <NavbarBrand className='navbar-logo' href='/' >
-                                    <img src='/assets/images/logo-one.png' alt='logo image' className='logo'/>
-                                </NavbarBrand>
                                 <NavbarToggler onClick = {props.onNav}/>
                                 <Collapse isOpen={props.navOpen} navbar className=''>
                                     <Nav navbar className="">
@@ -41,16 +37,10 @@ const navigationItems = (props) => {
                                             </NavItem>
 
                                     </Nav>
-                                    {/* <span className='Navbar-text nav-login'>
-                                            <Button onClick={props.onModal} className='loginBtn'>
-                                                <i className='fa fa-sign-in fa-lg'/>
-                                                    Log in
-                                            </Button>
-                                    </span> */}
                                 </Collapse>
                             </div>
                         </div>
-                    </Navbar>
+                    </Navbar> */}
                 {/* <Modal isOpen={props.modalOpen} toggle={props.onModal}>
                     <ModalHeader toggle={props.onModal}> Login</ModalHeader>
                     <ModalBody>

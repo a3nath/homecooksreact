@@ -1,5 +1,5 @@
-.Logo{
-    background-color: #fff;
+ .Logo{
+    background-color: #1f1f1f;
     padding: 8px;
     height: 100%;
     box-sizing: border-box;
@@ -9,3 +9,10 @@
 .Logo img {
     height: 100%;
 }
+
+@media (max-width: 499px) {
+    .Logo{
+        display:none;
+    }
+};
+

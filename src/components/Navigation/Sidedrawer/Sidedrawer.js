@@ -3,7 +3,7 @@ import React from 'react';
 import classes from './Sidedrawer.module.css';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
-
+import Backdrop from '../../Backdrop/Backdrop'
 
 const sidedrawer = (props) => {
 
@@ -15,7 +15,7 @@ const sidedrawer = (props) => {
 
     return (
         <React.Fragment>
-            {/* <Backdrop BackdropClicked={props.clicked} Backdropshow={props.show}/> */}
+            <Backdrop BackdropClicked={props.clicked} Backdropshow={props.show}/>
             <div className={DrawerClass.join(' ')}>
                 <div className={classes.Logo} style={{'height': '11%'}}>
                     <Logo/>
