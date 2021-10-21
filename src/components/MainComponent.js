@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import 'font-awesome/css/font-awesome.css';
+import 'bootstrap-social/bootstrap-social.css';
+
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
@@ -7,8 +10,9 @@ import CookPage from './CookPage';
 import CookDir from './CookDirectory';
 import {Switch, Route, Redirect, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
-import 'font-awesome/css/font-awesome.css';
-import 'bootstrap-social/bootstrap-social.css';
+import Layout from '../components/Layout/Layout';
+
+
 
 
 class Main extends Component {
@@ -73,14 +77,16 @@ class Main extends Component {
 
         return(
             <div>
-                <Header onNav= {this.toggleNavHandler} onModal = {this.toggleModalHandler} onLogin={this.loginHandler} navOpen={this.state.isNavOpen} modalOpen={this.state.isModalOpen}/>
-                <Switch>
-                    <Route exact path='/home' component={HomePage}/>
-                    <Route exact path ='/cooks' render={() => <CookDir cooks={this.props.cooks}  menu={this.props.menu} images={this.props.images}/>}/>
-                    <Route exact path = '/cooks/:cookNum' component={CookMenu}/>
-                    <Route exact path ='/becomecook' component={becomeCook}/>
-                    <Redirect to='/home'/>
-                </Switch>
+                {/* <Header onNav= {this.toggleNavHandler} onModal = {this.toggleModalHandler} onLogin={this.loginHandler} navOpen={this.state.isNavOpen} modalOpen={this.state.isModalOpen}/> */}
+                <Layout>
+                    <Switch>
+                        <Route exact path='/home' component={HomePage}/>
+                        <Route exact path ='/cooks' render={() => <CookDir cooks={this.props.cooks}  menu={this.props.menu} images={this.props.images}/>}/>
+                        <Route exact path = '/cooks/:cookNum' component={CookMenu}/>
+                        <Route exact path ='/becomecook' component={becomeCook}/>
+                        <Redirect to='/home'/>
+                    </Switch>
+                </Layout>
                 <Footer/>
             </div>
         );
