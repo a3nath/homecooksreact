@@ -25,6 +25,9 @@ Dont show for screens greater than 500px width
     .Sidedrawer{
         display: none; 
     }
+    .Sidedrawer.Logo{
+        display: block
+    }
 };
 
 .Open{

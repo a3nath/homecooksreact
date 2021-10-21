@@ -411,6 +411,10 @@ img{
 }
 
 .ratingIcon{
+    color:#fb8b61;
+}
+
+.ratingIcon:hover{
     color:yellow;
 }
 
@@ -617,7 +621,7 @@ a{
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 375px){
     .highlight-card{
         margin: 20px auto;
         width: 50vw;
@@ -629,6 +633,9 @@ a{
     }
     .cook-card-container{
         width:100%
+    }
+    .social-container h4{
+        display: none;
     }
 
 }
