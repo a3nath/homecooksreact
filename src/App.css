@@ -336,6 +336,7 @@ img{
 
 .carousel-body{
   background-color: wheat;
+  height: 100%;
 }
 
 .carousel-img{
@@ -567,6 +568,10 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 .contact-link{
     margin:0 2px;
 }
@@ -617,11 +622,11 @@ a{
         height: 600px;
     }
     .cook-card-container{
-        width:35%
+        width:40%;
     }
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 450px){
     .highlight-card{
         margin: 20px auto;
         width: 50vw;
