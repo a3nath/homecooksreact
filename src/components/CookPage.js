@@ -43,7 +43,7 @@ function RenderCookCard(props){
     return(
             <div className="media cookpage-media" key={props.cook.cookNum}>
                 <div className="cookpage-media-img">
-                    <img src={props.cook.cookImg} alt={props.cook.alt} className='img-fluid d-block cook-bio-img'/>
+                    <img src={props.cook.cookImg} alt={props.cook.alt} className='cook-bio-img'/>
                 </div>
                 <div className="cookpage-media-body card-body">
                     <h3 className='cook-name cook-media-text'>{props.cook.cookName}</h3>

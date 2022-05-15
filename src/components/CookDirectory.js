@@ -28,9 +28,9 @@ function RenderCookCard(props){
                     isPlaying={true}
                     interval={5000}
                 >
-                    <Slider>
+                    <Slider className='dir-slider'>
                         <Slide index={0}>
-                            <img className='carousel-img d-block w-100' src={props.cook.cookImg} alt={props.cook.alt}/>
+                            <img className='carousel-img' src={props.cook.cookImg} alt={props.cook.alt}/>
                         </Slide>
                         <Slide index={1}>
                             <img className='carousel-img' src={props.cook.foodImg1} alt='second food image'/>

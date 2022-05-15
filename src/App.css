@@ -216,8 +216,6 @@ img{
     align-items: flex-start;
     text-decoration: none;
     color: #201e24;
-    padding: 10px 20px;
-
 }
 
 .card-group{
@@ -258,6 +256,9 @@ img{
     height: 100%;
 }
 
+.dir-slider{
+    width: 250px;
+}
 
 .highlight-card{
     border-radius: 5px;
@@ -340,7 +341,7 @@ img{
 }
 
 .carousel-img{
-    width: 100%;
+    width: 250px;
     height: 100%;
     border-radius: 5px;
     padding-bottom: 0;
@@ -375,13 +376,17 @@ img{
 }
 
 .cook-bio-img{
-    width:800px;
-    height: 300px;
-    border-radius: 50%;
+    width:80%;
+    height: 600px;
 }
 
 .cookpage-media{
     display: flex;
+
+}
+
+.cookpage-media-img{
+    width: 50%;
 }
 
 .cookpage-media-body{
@@ -392,6 +397,7 @@ img{
     align-items: flex-start;
     height: 100%;
     justify-content: center;
+    width: 50%;
 }
 
 .cook-media-text{
@@ -626,7 +632,7 @@ a:hover{
     }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 500px){
     .highlight-card{
         margin: 20px auto;
         width: 50vw;
