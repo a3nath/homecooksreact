@@ -257,7 +257,7 @@ img{
 }
 
 .dir-slider{
-    width: 250px;
+    width: 100%;
 }
 
 .highlight-card{
@@ -341,7 +341,8 @@ img{
 }
 
 .carousel-img{
-    width: 250px;
+    min-width: 250px;
+    width: 100%;
     height: 100%;
     border-radius: 5px;
     padding-bottom: 0;
@@ -377,7 +378,7 @@ img{
 
 .cook-bio-img{
     width:80%;
-    height: 600px;
+    height: calc(5rem + 30vw )
 }
 
 .cookpage-media{
@@ -390,7 +391,6 @@ img{
 }
 
 .cookpage-media-body{
-    margin: 0 50px;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -409,6 +409,7 @@ img{
     display: flex;
     flex-direction: column;
     background-color: transparent;
+    margin: 0 5px;
 }
 
 .menu-card-body{
@@ -445,6 +446,7 @@ img{
 
 .cook-menu-container{
     margin: 10px;
+    width: 40%;
 }
 
 .review-row{
@@ -630,6 +632,42 @@ a:hover{
     .cook-card-container{
         width:40%;
     }
+}
+
+@media screen and (max-width: 600px){
+    .cookpage-media{
+        display: block;
+        text-align: center;
+    }
+    .cookpage-media-img{
+        margin: 0 auto;
+    }
+    .cook-bio-img{
+        width: 100%;
+        height: calc(5rem + 40vw );
+    }
+    .cook-name, .cuisine-name{
+        margin: 0 auto;
+    }
+
+    .cookpage-media-body{
+        width: 100%;
+    }
+    .cook-menu-group{
+       display: block
+    }
+    .cook-menu-container{
+        width: 80%;
+        margin: 50px 0;
+    }
+    .review-row{
+        display: block
+    }
+    .cook-review-container{
+        width: 80%;
+        margin: 50px auto;
+    }
+
 }
 
 @media screen and (max-width: 500px){
