@@ -20,7 +20,6 @@ function RenderCookMenu({menu}){
     )
 }
 
-
 function RenderCookReview({review}){
     return(
         <div className='card review-card'>

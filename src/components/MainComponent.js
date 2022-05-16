@@ -13,8 +13,6 @@ import { connect } from 'react-redux';
 import Layout from '../components/Layout/Layout';
 
 
-
-
 class Main extends Component {
 
     constructor(props){
@@ -23,19 +21,7 @@ class Main extends Component {
             isNavOpen: false,
             isModalOpen: false
         }
-
-        // this.toggleNavHandler = this.toggleNavHandler.bind(this);
-        // this.toggleModalHandler = this.toggleModalHandler.bind(this);
-        // this.loginHandler = this.loginHandler.bind(this);
     }
-
-    // componentDidMount(){
-    //     fetch(
-    //         'http://localhost:3000/campsites'
-    //     ).then(
-    //         data => data.json()
-    //     )
-    // }
 
     toggleNavHandler = () => {
         this.setState({
@@ -77,7 +63,6 @@ class Main extends Component {
 
         return(
             <div>
-                {/* <Header onNav= {this.toggleNavHandler} onModal = {this.toggleModalHandler} onLogin={this.loginHandler} navOpen={this.state.isNavOpen} modalOpen={this.state.isModalOpen}/> */}
                 <Layout>
                     <Switch>
                         <Route exact path='/home' component={HomePage}/>

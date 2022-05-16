@@ -1,12 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-// const required = val => val && val.length > 1;
-// const maxLength = len => val => !val || (val.length <= len);
-// const minLength = len => val => val && (val.length >= len);
-// const isEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
-
-
 const Footer = (props) => {
         return(
                 <footer className='site-footer'>

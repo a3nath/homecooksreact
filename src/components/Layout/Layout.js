@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import classes from './Layout.module.css';
+
 import Toolbar from '../Navigation/Toolbar/Toolbar';
 import Sidedrawer from '../Navigation/Sidedrawer/Sidedrawer';
 
@@ -24,7 +24,7 @@ const Layout = props => {
                 clicked={drawerClose} 
                 show={showSidedrawer} 
             />
-            <main className={classes.Content}>
+            <main>
                 {props.children}
             </main>
         </React.Fragment>

@@ -1,5 +1,3 @@
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faSearch} from '@fortawesome/free-solid-svg-icons';
 import {faUtensils} from '@fortawesome/free-solid-svg-icons';
 import {faShippingFast} from '@fortawesome/free-solid-svg-icons';

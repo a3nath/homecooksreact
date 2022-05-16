@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import logoImg from '/assets/images/logo-one.png'
 import classes from './Logo.module.css'
 
 
