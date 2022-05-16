@@ -473,14 +473,14 @@ img{
 }
 
 .becomeCookForm{
-    background-color: #f5f5f5;
+    background-color: #fff;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     margin: 20px auto;
-    width: 40%;;
+    width: 60%;
     border:solid #fff;
 }
 
@@ -499,14 +499,16 @@ img{
 
 .becomeCookInput{
     padding:20px;
-    border: solid #bbcdd6;
 }
 
 .becomeCookSubmit{
     padding:8px 16px;
     border-radius: 3px;
     margin: 0 auto;
-    width: 20%;
+    width: 40%;
+    background-color: #fb8b61;
+    border: solid #fb8b61;
+
 }
 
 .text-danger{
@@ -667,6 +669,9 @@ a:hover{
         width: 80%;
         margin: 50px auto;
     }
+    .becomeCookForm{
+        width: 80%;
+    }
 
 }
 
@@ -685,6 +690,9 @@ a:hover{
     }
     .social-container h4{
         display: none;
+    }
+    .becomeCookForm{
+        width: 100%;
     }
 
 }
