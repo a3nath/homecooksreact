@@ -521,7 +521,7 @@ img{
 .site-footer{
     background-color: #131316;
     color:whitesmoke;
-    padding:40px 40px;
+    padding:40px;
     color:#fff;
 }
 
@@ -537,14 +537,13 @@ img{
 }
 
 .footer-list{
-    padding:20px 0;
+    padding:calc(0.5rem + 1vw) 0;
 }
 
 .footer-list-link, .footer-list-contact{
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    padding: 0;  
 }
 
 .footer-list-social{
@@ -560,8 +559,10 @@ img{
 }
 
 .btn-social-icon{
-    padding: 20px;
+    padding: calc(1rem + 0.5vw);
     background-color: #131316;
+    border: none;
+    width: inherit !important;
 }
 
 i:hover{
@@ -672,6 +673,9 @@ a:hover{
     .becomeCookForm{
         width: 80%;
     }
+    .site-footer{
+        padding: 20px;
+    }
 
 }
 
@@ -688,12 +692,19 @@ a:hover{
     .cook-card-container{
         width:100%
     }
-    .social-container h4{
-        display: none;
-    }
     .becomeCookForm{
         width: 100%;
     }
+    .footer-container{
+        width: 100%;
+    }
+    footer, .btn-social-icon{
+        font-size: 1rem;
+    }
+    .btn-social-icon{
+        width: 1rem;
+    }
+
 
 }
 

@@ -10,7 +10,7 @@ import {Link} from 'react-router-dom';
 const Footer = (props) => {
         return(
                 <footer className='site-footer'>
-                    <div className='container'>
+                    <div className='container footer-container'>
                         <div className='row footer-row'>
                             <div className='links-container footer-list-container'>
                                 <h4>Links</h4>
